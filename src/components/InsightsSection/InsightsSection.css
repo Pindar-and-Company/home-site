@@ -1,0 +1,71 @@
+/* InsightsSection.css */
+  
+  .insights-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+ 
+  }
+  
+  .insights-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  /* Responsive grid */
+  @media (min-width: 768px) {
+    .insights-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .insights-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .article-card {
+    background-color: #f5f5f5;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .article-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .article-image-wrapper {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  .article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  
+  .article-content {
+    padding: 1.5rem;
+  }
+  
+  .article-date {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .article-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #1f2937;
+    line-height: 1.375;
+    margin: 0;
+  }

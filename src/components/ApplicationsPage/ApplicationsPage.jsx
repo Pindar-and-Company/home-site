@@ -1,0 +1,40 @@
+
+import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+
+import './ApplicationsPage.css';
+import HeaderImg from '../../assets/app-image.png';
+
+
+import { useLocation } from 'react-router-dom';
+import ApplicationsGrid from '../ApplicationsSection/ApplicationsCard';
+
+
+
+function ApplicationsPage() {
+
+  const location = useLocation(); // Get the current URL
+
+  return (
+    <div className="application-page">
+      <div className="application-header">
+      <div className="header_image">
+            
+            <div className="application-overlay"></div>
+            <img 
+            src={HeaderImg}
+            alt="application-image" 
+            className="application-img" />
+             </div>
+      
+        <h2 className="application-header-title"> Applications</h2>
+
+      </div>
+     <div className="app-grid">
+     <ApplicationsGrid slice_value={4} />
+     </div>
+    </div>
+  );
+}
+
+export default ApplicationsPage;

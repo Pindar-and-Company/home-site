@@ -1,0 +1,387 @@
+.about-us-page {
+    min-height: 100vh;
+  
+    position: relative; /* Add this to contain absolute children */
+            padding: 0; /* Remove padding to allow full-width sections */
+  
+  }
+  
+  .about-us-header{
+    margin: 0 auto ;  
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    align-items: center;
+    height: 390px;
+    overflow: hidden;
+    
+  }
+  
+  .about-us-overlay{
+    background: linear-gradient(90deg, 
+    #4a8b8c 0%, 
+    #5a8060 35%, 
+    #743E00 55%, 
+    #743E00 100%);
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    position: absolute;
+    
+  
+  
+   }
+  .about-us-header-title {
+    position: absolute;
+    top: 50%; /* Center vertically on the image */
+    left: 20%; /* Center horizontally on the image */
+    transform: translate(-50%, -50%); /* Perfect center alignment */
+  
+    
+    /* Typography */
+    font-family: var(--primary-font, );
+    font-size: 64px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    
+    /* Text styling for better visibility */
+   
+    letter-spacing: 2px;
+    
+  }
+
+  .about-us-logo{
+   
+    align-items: center;
+    transform: scale(1.3);
+    padding: 0px;
+    cursor: pointer;
+
+    margin-top: 110px;
+    
+    margin-left: 70%;
+    height: 85px;
+  }
+
+  
+  .who-we-are-section {
+    position: relative;
+            display: flex;
+            align-items: center;
+            width: 100vw;
+            height: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+            /* Add padding-top to push it below the header */
+            padding-top: 350px; /* Same as header height */
+            margin-top: 0; /* Remove the margin-top */
+            
+
+  }
+  
+  .who-we-are-content {
+    flex: 1;
+    width: 50%;
+    height: 100%;
+    
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    margin:0;
+    gap: 0;
+  }
+  
+  .who-we-are-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #F0F0F0;
+    z-index: 1;
+  }
+  
+  .who-we-are-content h2 {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    color:black;
+   
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .who-we-are-content p {
+    position: relative;
+    z-index: 2;
+    color: #595757;
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 15px;
+  
+    
+}
+  
+  
+.who-we-are-image {
+    flex: 1;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+.who-we-are-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  
+
+
+
+
+  .about-us-container {
+    /* Remove absolute positioning and center properly */
+    position: relative;
+    max-width: 1000px;
+    width: 90%; /* Changed from 100% to 90% for better centering */
+    margin: 40px auto; /* Center the container and add top margin */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff; /* Add background */
+
+  
+  }
+  
+  .about-us-tabs {
+    display: flex;
+    
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .about-us-tab {
+    flex: 1;
+    padding: 20px 30px;
+    background: none;
+    border: none;
+    font-family: var(--primary-font);
+    font-size: 22px;
+    font-weight: 600;
+    color: #595757;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .about-us-tab:hover {
+  
+    color: var(--link-hover-two);
+  }
+  
+  .about-us-tab.active {
+    color: var(--link-hover-two);
+    background-color: #ffffff;
+    border-bottom-color: var(--link-hover-color);
+  }
+  
+  .about-us-tab.active::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    
+    animation: slideIn 0.3s ease;
+  }
+  
+  .about-us-pg-content {
+    padding: 60px;
+    min-height: 400px;
+    animation: fadeIn 0.4s ease;
+  }
+  
+  .about-us-description {
+    font-family: var(--secondary-font, 'Georgia', serif);
+    font-size: 18px;
+    line-height: 1.8;
+    color: #495057;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.5s ease forwards;
+  }
+  
+  .about-us-description:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .about-us-description:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .about-us-description:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .about-us-description:last-child {
+    margin-bottom: 0;
+  }
+  
+
+
+  
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .who-we-are-section {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .who-we-are-content {
+      width: 100%;
+      padding: 40px 20px;
+      text-align: center;
+      align-items: center;
+    }
+    
+    .who-we-are-content h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      max-width: none;
+    }
+    
+    .who-we-are-image {
+      width: 100%;
+      height: 300px;
+    }
+    
+   
+  }
+  
+  @media (max-width: 480px) {
+    .who-we-are-content {
+      padding: 30px 15px;
+    }
+    
+    .who-we-are-content h2 {
+      font-size: 28px;
+    }
+    
+    .who-we-are-button {
+      width: 160px;
+      height: 55px;
+      font-size: 16px;
+    }
+  }
+  
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-us-page {
+      padding: 40px 15px;
+    }
+    
+    .about-us-tabs {
+      flex-direction: column;
+    }
+    
+    .about-us-tab {
+      padding: 15px 20px;
+      font-size: 16px;
+      border-bottom: 1px solid #e9ecef;
+      border-right: none;
+    }
+    
+    .about-us-tab.active {
+      border-bottom: 1px solid #e9ecef;
+      border-left: 3px solid #007bff;
+    }
+    
+    .about-us-tab.active::before {
+      display: none;
+    }
+    
+    .about-us-tab.active::after {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, #007bff, #0056b3);
+      animation: slideIn 0.3s ease;
+    }
+    
+    .about-us-pg-content {
+      padding: 40px 30px;
+      min-height: 300px;
+    }
+    
+    .about-us-description {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-us-pg-content {
+      padding: 30px 20px;
+    }
+    
+    .about-us-tab {
+      padding: 12px 15px;
+      font-size: 15px;
+    }
+    
+    .about-us-description {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }
