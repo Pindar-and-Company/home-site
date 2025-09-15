@@ -1,7 +1,11 @@
 import React from 'react';
 import './InsightsSection.css';
+import { useNavigate } from 'react-router-dom'; // Remove useParams, you don't need it here
 
 const InsightsSection = ({ articles = [] }) => {
+  // Move useNavigate to the TOP, right after the component declaration
+  const navigate = useNavigate();
+
   // Default sample data if no articles provided
   const defaultArticles = [
     {
@@ -36,15 +40,19 @@ const InsightsSection = ({ articles = [] }) => {
 
   const displayArticles = articles.length > 0 ? articles : defaultArticles;
 
+  // Now handleArticleClick can use navigate because it's already declared above
+  const handleArticleClick = (articleId) => {
+    navigate(`/insight/${articleId}`);
+  };
+
   return (
     <section className="insights-section">
       <div className="insights-container">
-    
-        
+
         <div className="insights-grid">
           {displayArticles.map((article) => (
-            <div 
-              key={article.id} 
+            <div
+              key={article.id}
               className="article-card"
               onClick={() => handleArticleClick(article.id)}
             >
@@ -55,12 +63,10 @@ const InsightsSection = ({ articles = [] }) => {
                   className="article-image"
                 />
               </div>
-              
               <div className="article-content">
                 <div className="article-date">
                   {article.date}
                 </div>
-                
                 <h3 className="article-title">
                   {article.title}
                 </h3>

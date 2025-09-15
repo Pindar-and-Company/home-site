@@ -5,7 +5,7 @@ import HomeView from "./components/HomeView/HomeView";
 import Navbar from "./components/Navbar/Navbar";
 import ApplicationsPage from "./components/ApplicationsPage/ApplicationsPage";
 import InsightsPage from "./components/InsightsPage/InsightsPage";
-//*import InsightArticles from './components/InsightArticles/InsightArticles';
+import InsightArticles from './components/InsightArticles/InsightArticles';
 import AboutUsPage from "./components/AboutUsPage/AboutPage";
 import Footer from "./components/Footer/Footer";
 import ServicesPage from "./components/ServicesPage/Services";
@@ -25,7 +25,7 @@ function App() {
           <Route path="/applications" element={<ApplicationsPage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/insights" element={<InsightsPage />} />
-           {/*<Route path="/article/:id" element={<InsightArticles />} /> */}
+           <Route path="/insight/:id?" element={<InsightArticles />} /> 
           <Route path="/services/:tag?" element={<ServicesPage />} />
           <Route path="/services" element={<ServicesPage />} />
         </Routes>
