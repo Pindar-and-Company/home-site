@@ -84,11 +84,11 @@
 
 .application-learn-more-button a:hover {
   
-  color:var(--link-hover-color) !important;
+  color:var(--link-hover-two) !important;
 }
 .application-learn-more-button:hover {
   
-  border: 2.5px solid var(--link-hover-color) !important;
+  border: 2.5px solid var(--link-hover-two) !important;
 }
 
 .application-learn-more-button a {

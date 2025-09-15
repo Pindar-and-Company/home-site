@@ -10,9 +10,6 @@ const InsightArticles = ({ articles = [] }) => {
 
 
 
-  const [showShareOptions, setShowShareOptions] = useState(false);
-  const [showReference, setShowReference] = useState(null);
-  
   // Default sample articles (same as in InsightsSection for consistency)
   const defaultArticles = [
     {
@@ -84,6 +81,7 @@ The decision-making process should involve multiple perspectives and use structu
   
   const displayArticles = articles.length > 0 ? articles : defaultArticles;
   const article = displayArticles.find(a => a.id === parseInt(id));
+
 
   const handleGoBack = () => {
     navigate('/');

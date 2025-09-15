@@ -5,6 +5,8 @@ import HomeView from "./components/HomeView/HomeView";
 import Navbar from "./components/Navbar/Navbar";
 import ApplicationsPage from "./components/ApplicationsPage/ApplicationsPage";
 import InsightsPage from "./components/InsightsPage/InsightsPage";
+import ApplicationCases from './components/ApplicationCases/ApplicationCases';
+
 import InsightArticles from './components/InsightArticles/InsightArticles';
 import AboutUsPage from "./components/AboutUsPage/AboutPage";
 import Footer from "./components/Footer/Footer";
@@ -26,6 +28,7 @@ function App() {
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/insights" element={<InsightsPage />} />
            <Route path="/insight/:id?" element={<InsightArticles />} /> 
+           <Route path="/application/:id?" element={<ApplicationCases />} /> 
           <Route path="/services/:tag?" element={<ServicesPage />} />
           <Route path="/services" element={<ServicesPage />} />
         </Routes>
