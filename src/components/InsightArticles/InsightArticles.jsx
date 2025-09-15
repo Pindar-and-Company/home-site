@@ -1,5 +1,5 @@
 // ArticlePage.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import './InsightArticles.css';
@@ -7,6 +7,11 @@ import './InsightArticles.css';
 const InsightArticles = ({ articles = [] }) => {
   const { id } = useParams();
   const navigate = useNavigate();
+
+
+
+  const [showShareOptions, setShowShareOptions] = useState(false);
+  const [showReference, setShowReference] = useState(null);
   
   // Default sample articles (same as in InsightsSection for consistency)
   const defaultArticles = [
@@ -14,7 +19,7 @@ const InsightArticles = ({ articles = [] }) => {
       id: 1,
       date: '7/22/2025',
       title: 'Data as a liability',
-      image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=400&fit=crop&auto=format',
+      image: 'https://images.unsplash.com/photo-1546314029-80c1749e96fa?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       imageAlt: 'Network connections visualization',
       content: `In today's digital landscape, organizations are discovering that data can be both an asset and a significant liability. While data drives innovation and business intelligence, it also creates compliance burdens, security risks, and operational overhead that can impact the bottom line.
 
@@ -29,8 +34,8 @@ The future of data management lies in finding the right balance between data uti
     {
       id: 2,
       date: '6/15/2025',
-      title: 'Mastering the ETL process',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=400&fit=crop&auto=format',
+      title: 'Mastering The ETL Process',
+      image: 'https://images.unsplash.com/photo-1635145613344-3e59b1e8afd0?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       imageAlt: 'Industrial pipes',
       content: `Extract, Transform, Load (ETL) processes are the backbone of modern data architecture, enabling organizations to move and transform data from various sources into actionable insights. Mastering these processes is crucial for any data-driven organization.
 
@@ -45,8 +50,8 @@ Best practices include implementing comprehensive monitoring and alerting, maint
     {
       id: 3,
       date: '4/7/2025',
-      title: 'Privacy by design',
-      image: 'https://images.unsplash.com/photo-1614064548237-3d9b9634e0dc?w=800&h=400&fit=crop&auto=format',
+      title: 'MLops: Meeting The Business Challenge',
+      image: 'https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       imageAlt: 'Private sign on wall',
       content: `Privacy by Design is not just a compliance requirement—it's a fundamental approach to building systems that respect user privacy from the ground up. This methodology ensures that privacy considerations are embedded throughout the entire system development lifecycle.
 
@@ -56,13 +61,14 @@ Technical implementation involves techniques like data minimization, pseudonymiz
 
 Organizations implementing Privacy by Design see benefits beyond compliance, including increased user trust, reduced security risks, and often improved system performance through more efficient data handling patterns.
 
-Practical implementation requires cross-functional collaboration between legal, security, engineering, and product teams. Privacy impact assessments should be conducted early and regularly, and privacy considerations should be built into technical architecture decisions from the beginning rather than retrofitted later.`
+Practical implementation requires cross-functional collaboration between legal, security, engineering, and product teams. Privacy impact assessments should be conducted early and regularly, and privacy considerations should be built into technical architecture decisions from the beginning rather than retrofitted later.`,
     },
+
     {
       id: 4,
       date: '3/20/2025',
       title: 'Finding the right solution',
-      image: 'https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=800&h=400&fit=crop&auto=format',
+      image: 'https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       imageAlt: 'Colorful sticky notes on board',
       content: `In the complex landscape of technology solutions, finding the right fit for your organization requires a systematic approach that balances current needs with future scalability. The solution selection process can make or break digital transformation initiatives.
 
@@ -103,26 +109,26 @@ The decision-making process should involve multiple perspectives and use structu
   return (
     <div className="article-page">
       <div className="article-container">
-        <button onClick={handleGoBack} className="back-button">
-     
-          Back to Insights
-        </button>
         
         <article className="article-content">
           <header className="article-header">
-            <div className="article-meta">
-              <time className="article-date">{article.date}</time>
-            </div>
-            <h1 className="article-title">{article.title}</h1>
-            <div className="article-image-container">
+          <div className="application-overlay"></div>
+          <div className="article-image-container">
               <img
                 src={article.image}
                 alt={article.imageAlt || article.title}
                 className="article-hero-image"
               />
             </div>
+            <h1 className="insight-article-title">{article.title}</h1>
+            <div className='insight-detials'>
+            <p className="insight-author">By: Valentine Okundaye</p>
+            <p className="insight-article-date">{article.date}</p>
+            </div>
+     
+           
+           
           </header>
-          
           <div className="article-body">
             {article.content.split('\n\n').map((paragraph, index) => (
               <p key={index} className="article-paragraph">
