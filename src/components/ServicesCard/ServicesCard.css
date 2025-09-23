@@ -133,8 +133,6 @@
     background: white;
   }
   
-
-  
   .see-more-button {
     align-self: center;
     width: 200px;
@@ -169,3 +167,40 @@
     width: 100%;
     height: 100%;
   }
+
+  @media (max-width: 530px) {
+    .see-more-button{
+      display: none;
+    }
+    .services-list {
+    
+      margin-bottom: 50px;
+      margin-left: 0;
+      margin-left: 20px;
+      margin-right: 20px ;
+  
+    }
+    .service-text p{
+      white-space: nowrap;
+    }
+    .service-underline {
+      width: 100%;
+      
+    }
+    .service-arrow{
+      margin-right: 0;
+    }
+    .services-content h2{
+    z-index: 1;
+    }
+    .mobile-service-overlay{
+      background-color: rgba(0, 0, 0, 0.35) !important;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+   
+    }
+
+  }
+ 

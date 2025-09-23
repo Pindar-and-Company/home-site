@@ -1,25 +1,32 @@
 import './HomeView.css'
 import ApplicationsGrid from '../ApplicationsSection/ApplicationsCard';
 import ContactSection from '../ContactUsCard/ContactUsCard';
-import ServicesSection from '../ServicesCard/ServicesCard'
-import InsightsSection from '../InsightsSection/InsightsSection'
-import backgroundImg from '../../assets/baltimore-hero.png'
+import ServicesSection from '../ServicesCard/ServicesCard';
+import InsightsSection from '../InsightsSection/InsightsSection';
+
+import MobileApplications from '../MobileApplications/MobileApplications'
+
 import { Link } from "react-router-dom";
 
+
 function HomeView() {
+    const backgroundImg = 'https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     return ( 
 
         <main id="home_view">
-             <section className="main-hero">
+             <section className="main-hero"> 
+            <div className='image-container'>
+
             <img 
-            
+             
                 src={backgroundImg}
                 alt="logo" 
                 className="background-img" />
                 <div className="dark-overlay"></div>
+                </div>
                 
                 <section className="intro-section">
-
+                    <div className='mobile_background_card'>
                     <h1>Computer Vision Consulting</h1>
                     <p>We help you go from out of the box components
                     to custom solutions and design scalable systems that
@@ -27,14 +34,20 @@ function HomeView() {
 
           
                     <button className="learn-more-button">
-                    <Link to="" target="_blank">Learn More</Link> </button> </section>
+                    <Link to="" target="_blank">Learn More</Link> </button> 
+                    </div>
+                    </section>
             </section>
             
             <section className="applications-section">
                 <h2 className='main-heading'>Applications</h2>
                 <ApplicationsGrid slice_value={2} />
             </section>
-            
+            <section className="mobile-applications-section">
+                <h2 className='main-heading'>Applications</h2>
+                <MobileApplications />
+
+            </section>
             <section className="services-section">
                 <ServicesSection />
             </section>
