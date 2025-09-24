@@ -9,9 +9,7 @@
   margin-bottom: 80px;
   top: 0 !important;
   right: 0 !important;
-
   overflow: hidden;
-
 }
 
 .intro-section h1{
@@ -72,9 +70,6 @@
   justify-content: center;
   display: flex;
   margin: 0 auto;
-
-
-  
 }
 
 
@@ -115,6 +110,10 @@
 .home-insights{ 
     margin-bottom: 80px;
   }
+
+  .mobile-insights-section{
+    display: none;
+   }
 
 @media (min-width: 1600px) {
   .background-img {
@@ -173,19 +172,16 @@
       display: none;
     }
     .intro-section p{
-     
+     padding-top: 20px;
     }
     
-     .applications-section{
-      display: none;
-     }
+  
 
     .intro-section h1{
-      
      padding-left: 50px;
-     padding-top: 0;
-     margin-top: 0px;
-     font-weight: 550;
+     padding-top: 30px;
+
+
  
     
     }
@@ -225,9 +221,25 @@
       padding: 0;
 
     }
-    .mobile-applications-section{
-      display: block;
-     }
+  
+   
 }
 
 
+
+@media screen and (max-width: 800px){
+  .applications-section{
+    display: none;
+   }
+   .mobile-applications-section{
+    display: block;
+    margin-right: 0 !important;
+   }
+   .mobile-insights-section{
+    display: block;
+    margin-bottom: 100px;
+   }
+   .insights-section{
+    display: none;
+   }
+}

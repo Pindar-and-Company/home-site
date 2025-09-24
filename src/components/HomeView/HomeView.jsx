@@ -3,7 +3,7 @@ import ApplicationsGrid from '../ApplicationsSection/ApplicationsCard';
 import ContactSection from '../ContactUsCard/ContactUsCard';
 import ServicesSection from '../ServicesCard/ServicesCard';
 import InsightsSection from '../InsightsSection/InsightsSection';
-
+import MobileInsights from'../MobileInsightsSection/MobileInsights'
 import MobileApplications from '../MobileApplications/MobileApplications'
 
 import { Link } from "react-router-dom";
@@ -58,6 +58,11 @@ function HomeView() {
                 <InsightsSection/> </div>
             </section>
 
+            <section className='mobile-insights-section'>
+               <div className="mobile-home-insights">
+            <h2 className='main-heading'>Insights</h2>
+                <MobileInsights/> </div>
+            </section>
             <section className="contact-section">
                 <ContactSection />
             </section> 
