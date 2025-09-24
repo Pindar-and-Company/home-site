@@ -1,7 +1,7 @@
 .applications-container {
   display: flex;
   flex-direction: column;
-  gap: 0; /* No gap between cards for seamless look */
+  gap: 0; /* No gap between cards  */
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -38,7 +38,7 @@
   font-weight: 400;
   line-height: 1.6;
   color: black;
-  margin-bottom: 40px;
+  
   margin: 0 auto;
   max-width: 500px;
 }
@@ -93,7 +93,6 @@
 
 .application-learn-more-button a {
   color: black !important;
- 
   text-decoration: none;
   display: block;
   width: 100%;
@@ -139,4 +138,11 @@
 /* Desktop: Default layout for autonomous vehicles (image left, content right) */
 @media (min-width: 769px) {
   /* No flex-direction change needed - default flex layout puts image first, content second */
+}
+@media (max-width: 1250px) {
+  .application-content p{
+
+    width: 75% !important;
+    padding-bottom: 20px;
+  }
 }
