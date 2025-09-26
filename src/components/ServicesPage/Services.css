@@ -1,74 +1,74 @@
+
 .services-page {
   min-height: 100vh;
-
-  padding: 60px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  padding: 0;
 }
 
-.service-header{
-  margin: 0 auto !important;  
+.service-header {
+  margin: 0 auto;
   top: 0;
   left: 0;
   right: 0;
-  position: absolute;
+  position: relative; /* Changed from absolute */
   align-items: center;
-  height: 390px;
+  height: 300px;
   overflow: hidden;
 }
 
-.service-overlay{
+.service-overlay {
   background-color: rgba(0, 0, 0, 0.526) !important;
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 
-
- }
 .services-header-title {
   position: absolute;
-  top: 60%; /* Center vertically on the image */
+  top: 50%; /* Center vertically on the image */
   left: 50%; /* Center horizontally on the image */
   transform: translate(-50%, -50%); /* Perfect center alignment */
+  z-index: 2; /* Above overlay */
 
-  
   /* Typography */
-  font-family: var(--primary-font, );
+  font-family: var(--primary-font);
   font-size: 64px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
   text-align: center;
-  
   /* Text styling for better visibility */
- 
   letter-spacing: 2px;
-  
 }
 
-.service-img{
-  object-fit:contain;
+.service-img {
+  object-fit: cover; /* Changed from contain to cover for better display */
   position: absolute;
-  width: 100vw;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Behind overlay and text */
   display: block;
-  
 }
-
 
 .services-container {
+  /* Proper positioning below header */
+  position: relative; /* Changed from absolute */
   max-width: 1000px;
-  width: 100%;
-  
+  width: 90%;
+  margin: 40px auto 0 auto; /* Add top margin to separate from header */
+  padding: 0;
   border-radius: 12px;
- margin-top: 20%;
   overflow: hidden;
+  background: #ffffff;
 }
 
 .services-tabs {
   display: flex;
-  
   border-bottom: 1px solid #e9ecef;
 }
 
@@ -88,7 +88,6 @@
 }
 
 .service-tab:hover {
-
   color: var(--link-hover-two);
 }
 
@@ -105,7 +104,6 @@
   left: 0;
   right: 0;
   height: 3px;
-  
   animation: slideIn 0.3s ease;
 }
 
@@ -116,7 +114,7 @@
 }
 
 .service-description {
-  font-family: var(--secondary-font, 'Georgia', serif);
+  font-family: var(--secondary-font);
   font-size: 18px;
   line-height: 1.8;
   color: #495057;
@@ -176,24 +174,23 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .services-page {
-    padding: 40px 15px;
-  }
+ 
   
   .services-tabs {
     flex-direction: column;
+    
   }
   
   .service-tab {
     padding: 15px 20px;
-    font-size: 16px;
+    font-size: 24px;
     border-bottom: 1px solid #e9ecef;
     border-right: none;
   }
   
   .service-tab.active {
     border-bottom: 1px solid #e9ecef;
-    border-left: 3px solid #007bff;
+   
   }
   
   .service-tab.active::before {
@@ -207,7 +204,7 @@
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, #007bff, #0056b3);
+   
     animation: slideIn 0.3s ease;
   }
   
