@@ -1,20 +1,21 @@
 .use-case-page {
     min-height: 100vh;
 
-    display: flex;
+
     align-items: center;
     justify-content: center;
+
   }
   
   .use-case-header{
-    margin: 0 auto !important;  
-    top: 0;
-    left: 0;
-    right: 0;
-    position: relative;
-    align-items: center;
-    height: 300px;
-    overflow: hidden;
+    margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: relative; /* Changed from absolute */
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
   }
   
   .use-case-overlay{
@@ -42,9 +43,7 @@
     color: #ffffff;
     margin: 0;
     text-align: center;
-    
     /* Text styling for better visibility */
-   
     letter-spacing: 2px;
     
   }
