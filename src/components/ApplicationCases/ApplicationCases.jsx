@@ -36,9 +36,7 @@ const ApplicationCases = ({ applications = [] }) => {
   return (
     <div className="use-case-page">
       <div className="use-case-container">
-        
-        <article className="use-case-content">
-          <header className="use-case-header">
+      <header className="use-case-header">
           <div className="use-case-overlay"></div>
           <div className="use-case-image-container">
               <img
@@ -49,6 +47,9 @@ const ApplicationCases = ({ applications = [] }) => {
             </div>
             <h1 className="use-case-title">{UseCase.title}</h1>           
           </header>
+        
+        <article className="use-case-content">
+          
           <div className="use-case-body">
             {UseCase.content.split('\n\n').map((paragraph, index) => (
               <p key={index} className="use-case-paragraph">

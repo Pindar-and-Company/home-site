@@ -1,6 +1,6 @@
 .use-case-page {
     min-height: 100vh;
-    padding: 60px 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,18 +11,20 @@
     top: 0;
     left: 0;
     right: 0;
-    position: absolute;
+    position: relative;
     align-items: center;
-    height: 390px;
+    height: 300px;
     overflow: hidden;
-
   }
   
   .use-case-overlay{
     background-color: rgba(0, 0, 0, 0.526) !important;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   
    }
 
@@ -33,7 +35,6 @@
     left: 50%; /* Center horizontally on the image */
     transform: translate(-50%, -50%); /* Perfect center alignment */
   
-    
     /* Typography */
     font-family: var(--primary-font, );
     font-size: 64px;
@@ -49,12 +50,14 @@
   }
   
   .use-case-image-container img{
-    object-fit:cover;
-    position: absolute;
-    width: 100vw;
-   
-    z-index: -1;
-    display: block;
+    object-fit: cover; /* Changed from contain to cover for better display */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;/* Behind overlay and text */
+  display: block;
     
   }
 
@@ -62,7 +65,7 @@
   .use-case-body {
     line-height: 1.8;
     color: #374151;
-    margin-top: 300px;
+    margin-top: 50px;
     align-items: center !important;
 
   }
@@ -82,3 +85,7 @@
   }
 
   
+
+  @media (max-width: 775px) {
+  
+  }
