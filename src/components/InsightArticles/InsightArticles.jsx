@@ -20,7 +20,6 @@ const InsightArticles = ({ articles = [] }) => {
       <div className="article-page">
         <div className="article-container">
           <button onClick={handleGoBack} className="back-button">
-          
             Back to Insights
           </button>
           <div className="article-not-found">
@@ -36,7 +35,7 @@ const InsightArticles = ({ articles = [] }) => {
     <div className="article-page">
       <div className="article-container">
         
-        <article className="article-content">
+      
           <header className="article-header">
           <div className="application-overlay"></div>
           <div className="article-image-container">
@@ -51,12 +50,11 @@ const InsightArticles = ({ articles = [] }) => {
             <p className="insight-author">By: Valentine Okundaye</p>
             <p className="insight-article-date">{article.date}</p>
             </div>
-     
-           
-           
+        
           </header>
+          <article className="article-insight-content">
           <div className="article-body">
-            {article.content.split('\n\n').map((paragraph, index) => (
+            {article.content.split('\n').map((paragraph, index) => (
               <p key={index} className="article-paragraph">
                 {paragraph.trim()}
               </p>
