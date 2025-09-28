@@ -27,7 +27,7 @@ function HomeView() {
                 
                 <section className="intro-section">
                     <div className='mobile_background_card'>
-                    <h1>Computer Vision Consulting</h1>
+                    <h1>MLops Consulting</h1>
                     <p>We help you go from out of the box components
                     to custom solutions and design scalable systems that
                      remove obstacles to your project goals</p>
@@ -52,7 +52,7 @@ function HomeView() {
                 <ServicesSection />
             </section>
 
-            <section className='insights-section'>
+            <section className='home-insights-section'>
                <div className="home-insights">
             <h2 className='main-heading'>Insights</h2>
                 <InsightsSection/> </div>
