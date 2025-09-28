@@ -77,4 +77,29 @@
   } 
   
 
+  /* For large desktop screens*/
+@media (min-width: 2000px) {
+  .insights-container {
+    max-width: 100rem;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
+
+  /* For large desktop screens*/
+  @media (max-width: 766px) {
+  .article-card {
+    max-width: 400px;
+    align-items: center;
+  }
+
+  .insights-section {
+     align-items: center;
+     justify-content: center;
+     padding: 0;
+     display: flex;
+  }
+  
+  }
   
