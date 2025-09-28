@@ -17,8 +17,8 @@
   --mobile-carousel-breakpoint: 708px;
   --heading-desktop :60px;
   --heading-mobile :40px;
-
-
+  --h2-mobile:40px;
+  --tab-mobile:24px;
   --descriptions-tablet: 25px;
   --descriptions-desktop: 20px
 }
