@@ -51,7 +51,7 @@ const ApplicationCases = ({ applications = [] }) => {
         <article className="use-case-content">
           
           <div className="use-case-body">
-            {UseCase.content.split('\n\n').map((paragraph, index) => (
+            {UseCase.content.split('\n').map((paragraph, index) => (
               <p key={index} className="use-case-paragraph">
                 {paragraph.trim()}
               </p>
