@@ -37,7 +37,7 @@ align-items: center;
   font-size: var(--heading-desktop);
   width: 100%;
   padding-top: 10%;
-  font-weight: 600;
+
   align-items: center;
   justify-content: center;
   display: flex;
@@ -133,6 +133,7 @@ align-items: center;
   text-align: center;
   padding-bottom: 2%;
 
+
    }
 
    .mobile-applications-section{
@@ -158,8 +159,16 @@ align-items: center;
   .intro-section p{   width: 70%;
    
    }
+}
 
+
+@media (max-width: 1370px) {
   
+ 
+  .insights-section{
+   margin-left: 50px !important;
+   margin-right: 50px;
+ }
 }
 
 @media (max-width: 1250px) {
@@ -168,20 +177,17 @@ align-items: center;
     margin-left: 50px;
     margin-right: 50px;
    }
-   .insights-section{
-    margin-left: 40px !important;
-    margin-right: 40px;
-  }
+
 }
 
 @media (max-width: 770px) {
   .intro-section h1 {
  
-      font-size: var(--heading-mobile);
+      /*font-size: var(--heading-mobile); */
      
   }
   .intro-section p {
-      font-size:  var(--descriptions-tablet);
+    
 
   }
 
