@@ -82,8 +82,8 @@
   
   .service-text h3 {
     font-family: var(--primary-font);
-    font-size: 26px;
-    font-weight: 600;
+ 
+    
     color: #ffffff;
     margin-bottom: 8px;
     transition: color 0.3s ease;
