@@ -4,24 +4,52 @@
 
 .main-hero{
   position: relative;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   margin-bottom: 80px;
   top: 0 !important;
   right: 0 !important;
   overflow: hidden;
+   
+  
+}
+/*
+align-items: center;
+    justify-content: center;
+*/
+.mobile_background_card {
+  align-items: center;
+    justify-content: center;
+    margin: auto auto;
+    width: 100vw;
+    color: #000;
 
 }
 
+.intro-section {
+  display: flex; 
+  justify-content: center;
+  width: 100vw;
+
+}
 .intro-section h1{
   font-family: var(--primary-font);
   font-size: var(--heading-desktop);
-  padding-left: 25%;
+  width: 100%;
   padding-top: 10%;
   font-weight: 600;
-
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
 }
 
+.intro-subtext {
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+}
 .intro-section p{
   font-family: var(--secondary-font);
   font-size: 24px;
@@ -29,22 +57,26 @@
   font-weight: 400;
   color: var(--primary-white);
   width: 50%;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   padding-top: 80px;
   line-height: 1.6;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  text-align: center;
 
+ 
 }
 
 .background-img {
   position: absolute;
   top: 0;
   right: 0;
-  max-height: 100vh;
-  width: 100%;
+  max-height: 90vh;
+  width: 100vw !important;
+  object-fit: cover;
   pointer-events: none;
   z-index: -1;
-  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+
   
 }
 
@@ -70,9 +102,6 @@
   justify-content: center;
   display: flex;
   margin: 0 auto;
-
-
-  
 }
 
 
@@ -106,41 +135,72 @@
 
    }
 
+   .mobile-applications-section{
+    display: none;
+   }
+
 .home-insights{ 
     margin-bottom: 80px;
   }
 
-@media (min-width: 1600px) {
-  .background-img {
-      max-width: 260px;
-  }
-}
+  .mobile-insights-section{
+    display: none;
+   }
+
+ 
 
 @media (max-width: 1160px) {
   .intro-section h1 {
       width: 70%;
      
   }
-  .intro-section p{   width: 80%; }
+
+  .intro-section p{   width: 70%;
+   
+   }
 
   
 }
 
+@media (max-width: 1250px) {
+  
+  .applications-section{
+    margin-left: 50px;
+    margin-right: 50px;
+   }
+   .insights-section{
+    margin-left: 40px !important;
+    margin-right: 40px;
+  }
+}
 
 @media (max-width: 770px) {
   .intro-section h1 {
-      line-height: 1.4;
-      font-family: var(--primary-font);
+ 
       font-size: var(--heading-mobile);
      
   }
   .intro-section p {
       font-size:  var(--descriptions-tablet);
+
   }
+
+ 
   
 }
 
+/* For large desktop screens*/
+@media (min-width: 2000px) {
+  .intro-section p{
+    padding-top: 150px;
+    padding-bottom: 220px
 
+  }
+ 
+  .background-img {
+    height: 100vh !important;
+  }
+}
 
 @media screen and (max-width: 899px){
   .background-img {
@@ -153,19 +213,117 @@
 }
 
 
-@media screen and (max-width: 440px){
-  .intro-section h1 {
-   
-      font-weight: 600;
+@media screen and (max-width: 560px){
+
+    .background-img {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    
+    }
+    .dark-overlay {
+      display: none;
+    }
+    .intro-section p{
+     padding-top: 20px;
+     padding-bottom: 50px;
+    }
+
+    .intro-section h1{
+     line-height: 1;
+     padding-top: 30px;
+     margin: 0 auto;
+     text-align: center;
+
 
     }
-  .background-img {
+
+    .learn-more-button {
+      /* Positioning */
      
-      opacity: 0.06;       
+      /* Size */
+      width: 172px;
+      height: 48px;
+    }
+    .mobile_background_card{
+      top: 0;
+      right: 0;
+      z-index: -1;
+      background-color: rgba(0, 0, 0, 1);
+      height: 60vh;
+      margin-top: -1%;
+      width: 100vw;
+      
+   
+    }
+    .main-hero{
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      padding: 0;
+      margin-bottom: none;
+      top: 0 !important;
+      right: 0 !important;
+     overflow: visible;
+    }
+    .background-img {
+ 
+      max-height: 40vh;
+      width: 100vw !important;
+      object-fit: cover;
+      pointer-events: none;
+      z-index: -1;
+      padding: 0;
 
+    }
   
-
-  }
+   
+   
 }
 
+@media screen and (max-width: 425px){
+  .background-img {
+    height: 30vh;
+  }
+  .mobile_background_card{
+  
+ 
+    height: 65vh;
+    margin-top: -1.5%;
 
+ 
+  }
+}
+@media screen and (max-width: 342px){
+  .background-img {
+    height: 20vh;
+  }
+  .mobile_background_card{
+  
+ 
+    height: 75vh;
+    margin-top: -1.5%;
+
+ 
+  }
+  
+}
+
+@media screen and (max-width: 800px){
+  .applications-section{
+    display: none;
+   }
+   .mobile-applications-section{
+    display: block;
+    margin-right: 0 !important;
+   }
+   .mobile-insights-section{
+    display: block;
+    margin-bottom: 100px;
+   }
+   .home-insights-section{
+    display: none;
+   }
+}

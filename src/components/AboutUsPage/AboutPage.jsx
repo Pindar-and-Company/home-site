@@ -1,4 +1,3 @@
-import MemberCard from './MemberCard'
 import { useEffect, useState } from 'react';
 
 import "./AboutPage.css";
@@ -44,13 +43,13 @@ export default function AboutPage() {
   return (
     <div className="about-us-page">
       <div className="about-us-header">
-      <div className="header_image">
+      <div className="about-header-image">
             
             <div className="about-us-overlay"></div>
            
              </div>
       
-        <h2 className="about-us-header-title"> About Us</h2>
+        <h2 className="about-us-header-title">Business Results Delivered</h2>
 
         <img src={logo} alt="Pindar logo" className="about-us-logo" />
 
@@ -58,7 +57,7 @@ export default function AboutPage() {
       </div>
       <div className='who-we-are-section'>
       <div className="who-we-are-content">
-        <h2>Who We Are</h2>
+   
         <p> {who_we_are}</p>
       </div>
       <div className="who-we-are-image">

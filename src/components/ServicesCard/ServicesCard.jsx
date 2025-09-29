@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import './ServicesCard.css';
+import { useNavigate } from 'react-router-dom';
 
 // Import your city/building image
 import backgroundimg from '../../assets/services.jpg';
@@ -8,25 +9,29 @@ import backgroundimg from '../../assets/services.jpg';
 
 function ServicesSection() {
     const [activeService, setActiveService] = useState('system-design');
-
+    const navigate = useNavigate();
+    const handleClick = (tag) => {
+      navigate(`/services/${tag}`);
+   };
+  
     const services = [
       {
         id: 'system-design',
         title: 'System Design',
         description: 'Learn how we architect solutions',
-        route: '/services/system-design'
+        route: 'system-design'
       },
       {
         id: 'model-training',
         title: 'Model Training',
         description: 'An overview of the model training process',
-        route: '/services/model-training'
+        route: 'model-training'
       },
       {
         id: 'data-pipelines',
         title: 'Data Engineering',
         description: 'Learn how we orchestrate mission critical workflows',
-        route: '/services/data-pipelines'
+        route: 'data-pipelines'
       }
     ];
   
@@ -35,7 +40,9 @@ function ServicesSection() {
           
         <div className="services-content">
         <div className="main-image">
+        <div className='mobile-service-overlay'>
         <img src={backgroundimg} alt="services background image" className='services-background-image' />
+       </div>
       </div>
           <h2 className="services-title">Services</h2>
           
@@ -45,8 +52,9 @@ function ServicesSection() {
                 key={service.id}
                 className={`service-item ${activeService === service.id ? 'active' : ''}`}
                 onMouseEnter={() => setActiveService(service.id)}
+               
               >
-                <div className="service-text">
+                <div className="service-text"  onClick={() => handleClick(service.route)} >
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </div>

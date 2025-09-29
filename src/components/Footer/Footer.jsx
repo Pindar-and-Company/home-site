@@ -46,37 +46,7 @@ function Footer() {
             
           </ul>
         </div>
-        <div className="social-list">
-          <ul>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/baltimore-code-coffee/"
-                className="social-button"
-                target ='_blank'
-              >
-                <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://baltimoretech.slack.com/archives/CTDNSM6EP"
-                className="social-button"
-                target = '_blank'
-              >
-                <FontAwesomeIcon className="social-icon" icon={faSlack} />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.meetup.com/baltimore-code-and-coffee"
-                className="social-button"
-                target = '_blank'
-              >
-                <FontAwesomeIcon className="social-icon" icon={faMeetup} />
-              </a>
-            </li>
-          </ul>
-        </div>
+       
         <div>
         <p className="copyright">
           © 2025 Pindar & Company All rights reserved.
@@ -124,35 +94,7 @@ function Footer() {
         <p className="copyright">
         © 2025 Pindar & Company All rights reserved.
         </p>
-        <ul className="social-list">
-          <li>
-            <a
-              href="https://www.linkedin.com/company/baltimore-code-coffee/"
-              className="social-button"
-              target = '_blank'
-            >
-              <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://baltimoretech.slack.com/archives/CTDNSM6EP"
-              className="social-button"
-              target = '_blank'
-            >
-              <FontAwesomeIcon className="social-icon" icon={faSlack} />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.meetup.com/baltimore-code-and-coffee"
-              className="social-button"
-              target = '_blank'
-            >
-              <FontAwesomeIcon className="social-icon" icon={faMeetup} />
-            </a>
-          </li>
-        </ul>
+      
       </div>
       </section>
     </footer>

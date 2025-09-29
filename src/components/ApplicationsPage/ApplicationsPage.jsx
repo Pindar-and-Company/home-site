@@ -9,7 +9,7 @@ import HeaderImg from '../../assets/app-image.png';
 import { useLocation } from 'react-router-dom';
 import ApplicationsGrid from '../ApplicationsSection/ApplicationsCard';
 
-
+import MobileApplications from '../MobileApplications/MobileApplications'
 
 function ApplicationsPage() {
 
@@ -33,6 +33,7 @@ function ApplicationsPage() {
      <div className="app-grid">
      <ApplicationsGrid slice_value={4} />
      </div>
+     <div className="mobile-app-grid" > <MobileApplications/></div>
     </div>
   );
 }

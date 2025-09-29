@@ -111,41 +111,9 @@ function MobileSlidingMenu({ buttonId, menuId, buttonIcon, menuItems }) {
             </li>
           ))}
         </ul>
-        <div className="social-list">
-          <ul>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/baltimore-code-coffee/"
-                className="social-button"
-                target = '_blank'
-              >
-                <FontAwesomeIcon className="social-icon" icon={faLinkedin} />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://baltimoretech.slack.com/archives/CTDNSM6EP"
-                className="social-button"
-                target = '_blank'
-              >
-                <FontAwesomeIcon className="social-icon" icon={faSlack} />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.meetup.com/baltimore-code-and-coffee"
-                className="social-button"
-                target = '_blank'
-              >
-                <FontAwesomeIcon className="social-icon" icon={faMeetup} />
-              </a>
-            </li>
-          </ul>
-        </div>
+        
         <div>
-        <p className="copyright">
-          © 2024 Baltimore Code and Coffee All rights reserved.
-        </p>
+    
         </div>
      
       </nav>
