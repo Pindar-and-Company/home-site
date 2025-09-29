@@ -21,7 +21,7 @@ function ApplicationCard({ content }) {
         className="mobile-application-image"/>
       </div>
       <div className="mobile-application-content" onClick={() => handleAppClick(content.id)}>
-        <h2>{content.title}</h2>
+        <h3>{content.title}</h3>
         <p>{content.description}</p>
       
       </div>
