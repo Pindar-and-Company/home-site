@@ -21,7 +21,7 @@
 
 .mobile-application-content p {
   font-family: var(--secondary-font, 'Arial', sans-serif);
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
   color: black;
