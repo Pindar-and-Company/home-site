@@ -30,8 +30,8 @@
     left: 50%; /* Center horizontally on the image */
     transform: translate(-50%, -50%); /* Perfect center alignment */
     /* Typography */
-    font-family: var(--primary-font, );
-    font-size: 64px;
+   
+
     font-weight: 700;
     color: #ffffff;
     margin: 0;

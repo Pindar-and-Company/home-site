@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 import './ApplicationsPage.css';
 import HeaderImg from '../../assets/app-image.png';
 
-
 import { useLocation } from 'react-router-dom';
 import ApplicationsGrid from '../ApplicationsSection/ApplicationsCard';
 
@@ -27,7 +26,7 @@ function ApplicationsPage() {
             className="application-img" />
              </div>
       
-        <h2 className="application-header-title"> Applications</h2>
+        <h1 className="application-header-title"> Applications</h1>
 
       </div>
      <div className="app-grid">
