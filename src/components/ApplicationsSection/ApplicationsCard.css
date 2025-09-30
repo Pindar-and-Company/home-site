@@ -81,13 +81,9 @@
   font-weight: 550;
 }
 
-.application-learn-more-button a:hover {
-  
-  color:var(--link-hover-two) !important;
-}
 .application-learn-more-button:hover {
-  
-  border: 2.5px solid var(--link-hover-two) !important;
+  background-color: rgba(251, 251, 251, 0.5); /* Subtle hover effect */
+  border: 2.5px solid var(--link-hover-color) !important;
 }
 
 .application-learn-more-button a {
@@ -108,7 +104,10 @@
     flex-direction: column;
     min-height: auto;
   }
-  
+  .application-learn-more-button {
+    width: 100px;
+    height: 20px;}
+    
   .application-content {
     padding: 40px 20px;
     text-align: center;
