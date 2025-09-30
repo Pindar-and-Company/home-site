@@ -26,7 +26,6 @@
 .application-content h2 {
   font-family: var(--primary-font, 'Arial', sans-serif);
 
-  font-weight: 700;
   color:black;
   margin: 0 auto;
   margin-bottom: 20px;
