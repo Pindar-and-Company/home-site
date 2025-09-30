@@ -33,7 +33,6 @@ function HomeView() {
                     to custom solutions and design scalable systems that
                      remove obstacles to your project goals</p>
                      </div>
-
           
                     <button className="learn-more-button">
                     <Link to="" target="_blank">Learn More</Link> </button> 
