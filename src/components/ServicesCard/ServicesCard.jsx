@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import './ServicesCard.css';
 import { useNavigate } from 'react-router-dom';
-import Button from '../Button/Button'
+
 // Import your city/building image
 import backgroundimg from '../../assets/services.jpg';
 

@@ -5,7 +5,6 @@ import ServicesSection from '../ServicesCard/ServicesCard';
 import InsightsSection from '../InsightsSection/InsightsSection';
 import MobileInsights from'../MobileInsightsSection/MobileInsights'
 import MobileApplications from '../MobileApplications/MobileApplications'
-
 import { Link } from "react-router-dom";
 
 
@@ -36,6 +35,7 @@ function HomeView() {
           
                     <button className="learn-more-button">
                     <Link to="" target="_blank">Learn More</Link> </button> 
+                  
                     </div>
                     </section>
             </section>

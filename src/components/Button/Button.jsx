@@ -1,6 +1,7 @@
 import "./Button.css";
 import { useNavigate } from "react-router-dom";
 import EastIcon from "@mui/icons-material/East";
+import { Link } from "react-router-dom";
 
 // use either path OR externalLink props not both
 export default function Button({ text, path, externalLink, uniqueClassName }) {
@@ -24,8 +25,9 @@ export default function Button({ text, path, externalLink, uniqueClassName }) {
       type="button"
       onClick={handleClick}
     >
-      {text}
-      <EastIcon fontSize="small" />
+       <Link to={path}>  {text}</Link> 
+    
+  
     </button>
   );
 }

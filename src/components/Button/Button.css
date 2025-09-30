@@ -1,15 +1,29 @@
 .button {
-  padding: 8px 17px;
-  cursor: pointer;
-  border-radius: 10px;
-  background-color: #9857d3;
-  border: none;
-  color: #f4f0ff;
-  display: flex;
-  width: min-content;
-  align-items: center;
-  gap: 4px;
-  font-size: 14px;
-  font-family: var(--secondary-font);
-  line-height: 1;
+   /* Size */
+   width: 250px;
+   height: 65px;
+   /* Styling */
+   box-sizing: border-box;
+   border: 4px solid #FFFFFF;
+   border-radius: 40px;
+   background-color: transparent; /* Zero opacity fill */
+   
+   /* Text styling */
+   font-family: 'Roboto';
+   font-weight: 600;
+   font-size: 24px;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   margin: 0 auto;
+   color: #FFFFFF  !important;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+.button a {
+ color: #FFFFFF  !important;
+ text-decoration: none;
 }
