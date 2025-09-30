@@ -33,10 +33,7 @@
   transform: translate(-50%, -50%); /* Perfect center alignment */
   z-index: 2; /* Above overlay */
 
-  /* Typography */
-  font-family: var(--primary-font);
-  font-size: 64px;
-  font-weight: 700;
+
   color: #ffffff;
   margin: 0;
   text-align: center;
@@ -70,6 +67,8 @@
 .services-tabs {
   display: flex;
   border-bottom: 1px solid #e9ecef;
+
+
 }
 
 .service-tab {
@@ -85,10 +84,19 @@
   transition: all 0.3s ease;
   position: relative;
   border-bottom: 3px solid transparent;
+
+   /* Override app.css button styles */
+   border-radius: 0px
+
+
 }
 
 .service-tab:hover {
   color: var(--link-hover-two);
+  
+  border: 0px;
+
+ 
 }
 
 .service-tab.active {
@@ -173,7 +181,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
  
   
   .services-tabs {
@@ -205,7 +213,10 @@
     bottom: 0;
     width: 3px;
    
-    animation: slideIn 0.3s ease;
+    
+  }
+  .service-tab:hover{
+    border-bottom: 1px solid #e9ecef;
   }
   
   .services-pg-content {

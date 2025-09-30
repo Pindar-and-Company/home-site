@@ -69,7 +69,7 @@ function ServicesPage() {
             className="service-img" />
              </div>
       
-        <h2 className="services-header-title"> Services</h2>
+        <h1 className="services-header-title"> Services</h1>
 
       </div>
       <div className="services-container">
