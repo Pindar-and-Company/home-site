@@ -37,6 +37,7 @@ align-items: center;
   font-size: var(--heading-desktop);
   width: 100%;
   padding-top: 10%;
+  white-space: nowrap;
 
   align-items: center;
   justify-content: center;
@@ -209,6 +210,7 @@ align-items: center;
      padding-top: 30px;
      margin: 0 auto;
      text-align: center;
+     white-space: normal;
 
 
     }
@@ -219,6 +221,7 @@ align-items: center;
       /* Size */
       width: 172px;
       height: 48px;
+    
     }
     .mobile_background_card{
       top: 0;
