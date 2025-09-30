@@ -81,39 +81,6 @@ align-items: center;
 }
 
 
-.learn-more-button {
-  /* Positioning */
- 
-  /* Size */
-  width: 250px;
-  height: 65px;
-  /* Styling */
-  box-sizing: border-box;
-  border: 4px solid #FFFFFF;
-  border-radius: 40px;
-  background-color: transparent; /* Zero opacity fill */
-
-  
-  /* Text styling */
-  font-family: 'Roboto';
-  font-weight: 600;
-  font-size: 24px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin: 0 auto;
-}
-
-
-
-.learn-more-button:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
-}
-
-.learn-more-button a {
- color: #FFFFFF  !important;
- text-decoration: none;
-}
 
 .dark-overlay {
   position: absolute; /* Position over the image */
