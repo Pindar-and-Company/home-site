@@ -46,9 +46,11 @@
 }
 
 .nav-contact-button{
-  height: 42px;
-  width: 140px;
+
+  height: 42px ;
+  width: 140px ;
   border: 1.5px solid white;
+
 }
 
 
@@ -61,7 +63,7 @@
 
 /* targets only the dropdown */
 .MuiButtonBase-root,
-
+#navEventsButton,
 .navbar__desktop-menu,
 .navbar__link {
   font-family: "DM Sans", Helvetica, sans-serif;
