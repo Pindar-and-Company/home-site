@@ -219,14 +219,15 @@ align-items: center;
       /* Positioning */
      
       /* Size */
-      width: 172px;
-      height: 48px;
+      width: 12.5rem ;
+      height: 3.438rem;
+      font-size: 1.4rem;
     
     }
     .mobile_background_card{
       top: 0;
       right: 0;
-      z-index: -1;
+
       background-color: rgba(0, 0, 0, 1);
       height: 60vh;
       margin-top: -1%;
