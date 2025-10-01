@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 
 import './Services.css';
-import HeaderImg from '../../assets/services.jpg'
+
 //import ProcessSection from '../OurProcess/OurProcess'
 import { useLocation } from 'react-router-dom';
+
+const  HeaderImg = 'https://images.unsplash.com/photo-1617727553230-35c143f84010?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 function ServicesPage() {
 
   const location = useLocation(); // Get the current URL
