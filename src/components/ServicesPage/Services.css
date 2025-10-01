@@ -92,9 +92,10 @@
 }
 
 .service-tab:hover {
-  color: var(--link-hover-two);
   
+   /* Override app.css button styles */
   border: 0px;
+  border-bottom: 3px solid transparent;
 
  
 }
