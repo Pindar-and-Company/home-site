@@ -38,18 +38,14 @@
     transform: translate(-50%, -50%); /* Perfect center alignment */
   
     
-    /* Typography */
-    font-family: var(--primary-font, );
+  
   
     color: #ffffff;
     margin: 0;
     white-space: nowrap;
 
-    
     /* Text styling for better visibility */
-   
     letter-spacing: 2px;
-    
   }
 .who-we-are-image{
   display: flex;
@@ -94,6 +90,7 @@
     position: relative;
     margin:0;
     gap: 0;
+    
   }
   
   .who-we-are-content::before {
@@ -107,28 +104,17 @@
     z-index: 1;
   }
   
-  .who-we-are-content h2 {
-    font-family: var(--primary-font);
-    font-weight: 400;
-    color:black;
-   
-    line-height: 1.2;
-    position: relative;
-    z-index: 2;
-    max-width: 400px;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
+
   
   .who-we-are-content p {
     position: relative;
     z-index: 2;
-    color: #595757;
-    font-size: 22px;
+ 
     line-height: 1.6;
-    max-width: 400px;
+    max-width: 65%;
     margin: 0 auto;
-    margin-top: 45px;
+    margin-top: 70px ;
+    padding: 24px;
   
     
 }
@@ -246,14 +232,31 @@
     margin-bottom: 0;
   }
   
+  @media (max-width: 550px) {
+    .about-us-header-title {
+      white-space: normal;
+    }
+  }
 
-  
+  @media (max-width: 1010px) {
+     
+      .who-we-are-content p {
+        margin-top: 20px;
+     
+
+     }
+    }
   /* Responsive Design */
   @media (max-width: 800px) {
     .who-we-are-section {
       flex-direction: column;
       height: auto;
     }
+    .who-we-are-content p {
+      margin-top: 0;
+   
+
+   }
     
     .who-we-are-content {
       width: 100%;
@@ -262,11 +265,7 @@
       align-items: center;
     }
     
-    .who-we-are-content h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-      max-width: none;
-    }
+  
     
     .who-we-are-image {
       width: 100%;
@@ -278,6 +277,7 @@
       font-size: var(  --h2-mobile);
       width: 100%;
     }
+   
 
   
  
@@ -289,10 +289,7 @@
       padding: 30px 15px;
     }
     
-    .who-we-are-content h2 {
-      font-size: 28px;
-    }
-    
+
     .who-we-are-button {
       width: 160px;
       height: 55px;
