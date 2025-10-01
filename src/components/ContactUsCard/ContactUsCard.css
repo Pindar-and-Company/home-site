@@ -51,7 +51,6 @@
    justify-content: left;
    margin: 0;
 
-    font-weight: 600;
     font-size: 1.4rem;
     color: #ffffff;
     cursor: pointer;
@@ -98,7 +97,7 @@
     
     .contact-content {
       width: 100%;
-      padding: 40px 20px;
+      margin-top: -1%;
       text-align: center;
       align-items: center;
  
@@ -113,9 +112,9 @@
     
     
     .contact-button {
-      width: 210px !important;
-      height: 70px !important;
-      font-size: 18px;
+      width: 12.5rem ;
+      height: 3.438rem;
+      font-size: 1.4rem !important;
     }
 
     .contact-image{
@@ -141,11 +140,10 @@
   @media (max-width: 480px) {
     .contact-content {
       padding: 30px 15px;
+      white-space: normal !important;
+ 
     }
     
-    .contact-content h2 {
-      font-size: 28px;
-    }
     
     .contact-button {
       width: 160px;
