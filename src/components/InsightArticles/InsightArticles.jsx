@@ -53,6 +53,10 @@ const InsightArticles = ({ articles = [] }) => {
         
           </header>
           <article className="article-insight-content">
+            <div className='mobile-insight-detials'>
+            <p className="insight-author">By: Valentine Okundaye</p>
+            <p className="insight-article-date">{article.date}</p>
+            </div>
           <div className="article-body">
             {article.content.split('\n').map((paragraph, index) => (
               <p key={index} className="article-paragraph">
