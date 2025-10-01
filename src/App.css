@@ -21,8 +21,7 @@
   --heading-mobile :40px;
   --h2-mobile:40px;
   --tab-mobile:24px;
-  --descriptions-tablet: 25px;
-  --descriptions-desktop: 20px
+ --tab-button: 1.5rem;
 }
 
 
@@ -57,6 +56,10 @@ main {
 }
 p {
   margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-family: var(--secondary-font);
+  color: #3e3e3e  ;
 }
 h1,
 h2,
@@ -72,7 +75,7 @@ h1 {
   font-size: var(--heading-desktop);
   font-style: normal;
   font-weight: 500;
-  line-height: 77px;
+  line-height: 1.5;
   letter-spacing: -1.42px;
   color: var(--primary-white);
   max-width: 987px;
@@ -144,3 +147,8 @@ button a {
  text-decoration: none;
 }
 
+@media (max-width: 480px) {
+  h1{
+    font-size: 3.25rem !important;
+  }
+}
