@@ -150,7 +150,6 @@
   
   .about-us-tabs {
     display: flex;
-    
     border-bottom: 1px solid #e9ecef;
   }
   
@@ -160,9 +159,10 @@
     background: none;
     border: none;
     font-family: var(--primary-font);
-    font-size: 22px;
+    font-size: var( --tab-button);
+ 
     font-weight: 600;
-    color: #595757;
+    color: #212121;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -207,8 +207,6 @@
   
   .about-us-description {
     font-family: var(--secondary-font, 'Georgia', serif);
-    font-size: 18px;
-    line-height: 1.8;
     color: #495057;
     margin-bottom: 30px;
     opacity: 0;
@@ -255,6 +253,7 @@
     .who-we-are-content p {
       margin-top: 0;
    
+   
 
    }
     
@@ -290,11 +289,7 @@
     }
     
 
-    .who-we-are-button {
-      width: 160px;
-      height: 55px;
-      font-size: 16px;
-    }
+
   }
   
   
@@ -338,7 +333,7 @@
     
     .about-us-tab {
       padding: 15px 20px;
-      font-size: 16px;
+      
       border-bottom: 1px solid #e9ecef;
       border-right: none;
     }
@@ -361,7 +356,7 @@
     }
     
     .about-us-description {
-      font-size: 16px;
+ 
       margin-bottom: 25px;
     }
   }
@@ -373,11 +368,8 @@
     
     .about-us-tab {
       padding: 12px 15px;
-      font-size: 15px;
+   
     }
     
-    .about-us-description {
-      font-size: 15px;
-      line-height: 1.6;
-    }
+ 
   }
