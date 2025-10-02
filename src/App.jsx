@@ -12,6 +12,7 @@ import AboutUsPage from "./components/AboutUsPage/AboutPage";
 import Footer from "./components/Footer/Footer";
 import ServicesPage from "./components/ServicesPage/Services";
 import ScrollToTop from './ScrollToTop';
+import ContactPage from './components/ContactPage/ContactPage'
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
            <Route path="/application/:id?" element={<ApplicationCases />} /> 
           <Route path="/services/:tag?" element={<ServicesPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/contact-us" element={<ContactPage />} />
+
         </Routes>
       </div>
       <Footer /> 
