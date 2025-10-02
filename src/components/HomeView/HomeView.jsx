@@ -5,6 +5,7 @@ import ServicesSection from '../ServicesCard/ServicesCard';
 import InsightsSection from '../InsightsSection/InsightsSection';
 import MobileInsights from'../MobileInsightsSection/MobileInsights'
 import MobileApplications from '../MobileApplications/MobileApplications'
+
 import { Link } from "react-router-dom";
 
 
