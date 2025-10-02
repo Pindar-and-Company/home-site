@@ -36,6 +36,7 @@
     color: white;
     margin: 0 auto;
     margin-top: 24px;
+    z-index: 1;
 }
 
 .services-content .service-list{
@@ -87,15 +88,17 @@
     color: #ffffff;
     margin-bottom: 8px;
     transition: color 0.3s ease;
+
   }
   
   .service-text p {
     font-family: var(--secondary-font, 'Arial', sans-serif);
     font-size: 18px;
     font-weight: 400;
-    color: #cccccc;
+    color: #e6e2e2;
     margin: 0;
     transition: color 0.3s ease;
+
   }
 
 
@@ -135,20 +138,28 @@
   
   .see-more-button {
     align-self: center;
-    width: 200px ;
-    height: 55px;
-    font-size: 1.4rem;
+    width: 12.5rem ;
+    height: 3.438rem;
+    font-size: 1.4rem ; 
+    z-index: 1;
     
   }
   
+  .mobile-service-overlay{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 
+ 
+  }
  
   @media (max-width: 800px) {
     .see-more-button{
       z-index: 1;
     }
     .services-background-image {
-      height: 600px;
+       height: 600px;
     }
     .services-list {
     
@@ -171,14 +182,7 @@
     .services-content h2{
     z-index: 1;
     }
-    .mobile-service-overlay{
-      background-color: rgba(0, 0, 0, 0.35) !important;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-
-   
-    }
+  
 
   }
  
