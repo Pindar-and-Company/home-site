@@ -14,6 +14,55 @@ const InsightArticles = ({ articles = [] }) => {
   const handleGoBack = () => {
     navigate('/');
   };
+// Function to parse text and inject hyperlinks
+const parseTextWithLinks = (text, links = []) => {
+  if (!links || links.length === 0) return text;
+
+  let result = text;
+  const parts = [];
+  let lastIndex = 0;
+
+  // Sort links by their position in the text (first occurrence)
+  const sortedLinks = [...links].sort((a, b) => {
+    const indexA = result.indexOf(a.word);
+    const indexB = result.indexOf(b.word);
+    return indexA - indexB;
+  });
+
+  sortedLinks.forEach((link, linkIndex) => {
+    const index = result.indexOf(link.word, lastIndex);
+    
+    if (index !== -1) {
+      // Add text before the link
+      if (index > lastIndex) {
+        parts.push(result.substring(lastIndex, index));
+      }
+      
+      // Add the link
+      parts.push(
+        <a
+          key={`link-${linkIndex}`}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="article-link"
+        >
+          {link.word}
+        </a>
+      );
+      
+      lastIndex = index + link.word.length;
+    }
+  });
+
+  // Add remaining text
+  if (lastIndex < result.length) {
+    parts.push(result.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+};
+
 
   if (!article) {
     return (
@@ -60,7 +109,7 @@ const InsightArticles = ({ articles = [] }) => {
           <div className="article-body">
             {article.content.split('\n').map((paragraph, index) => (
               <p key={index} className="article-paragraph">
-                {paragraph.trim()}
+                {parseTextWithLinks(paragraph.trim(), article.links)}
               </p>
             ))}
           </div>

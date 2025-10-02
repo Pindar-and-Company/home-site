@@ -93,6 +93,18 @@
   .article-insight-content{
     padding:24px
   }
+
+  .article-link {
+    color: var(--link-hover-two, #007bff);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 1.25rem;
+   
+  }
+  
+  .article-link:hover {
+    color: var(--link-hover-color, #0056b3);
+  }
 .mobile-insight-detials {
   display: none;
 }
