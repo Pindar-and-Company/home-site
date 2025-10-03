@@ -51,4 +51,16 @@
     margin-top: 300px 
   }
 
+  @media (max-width: 816px) {
+    
+    .contact-img{
+      object-fit:cover;
+      height: 100%;
+      position: absolute;
+      width: 100vw;
+      z-index: -1;
+      display: block;
+    }
+  }
+
   
