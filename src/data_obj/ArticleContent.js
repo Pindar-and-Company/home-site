@@ -13,7 +13,13 @@ Organizations must now consider the total cost of data ownership, including stor
 
 Key strategies for managing data as a liability include implementing data retention policies, conducting regular data audits, and establishing clear data ownership and accountability structures. Organizations that proactively address these challenges will find themselves better positioned to leverage data as a strategic asset while minimizing associated risks.
 
-The future of data management lies in finding the right balance between data utility and data responsibility. This requires not just technical solutions, but also cultural changes in how organizations think about data collection, storage, and use.`
+The future of data management lies in finding the right balance between data utility and data responsibility. This requires not just technical solutions, but also cultural changes in how organizations think about data collection, storage, and use.[1]`,
+"links": [
+  {
+    "word": "[1]",
+    "url": "https://www.google.com"
+  }
+]
     },
     {
       id: 2,

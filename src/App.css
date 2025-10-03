@@ -15,12 +15,13 @@
   --secondary-font: "roboto", sans-serif;
   --tertiary-font: "PingFang-SC", sans-serif;
   --mobile-carousel-breakpoint: 708px;
-  --heading-desktop :60px;
+  --heading-desktop :4rem;
+  --sub-heading-desktop :2.5rem;
+  --card-heading-desktop:2rem;
   --heading-mobile :40px;
   --h2-mobile:40px;
   --tab-mobile:24px;
-  --descriptions-tablet: 25px;
-  --descriptions-desktop: 20px
+ --tab-button: 1.5rem;
 }
 
 
@@ -48,12 +49,17 @@ body {
 
 }
 
+
 main {
 
   margin: 0 auto;
 }
 p {
   margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-family: var(--secondary-font);
+  color: #3e3e3e  ;
 }
 h1,
 h2,
@@ -66,19 +72,28 @@ h6 {
 }
 h1 {
   font-size: 71px;
+  font-size: var(--heading-desktop);
   font-style: normal;
   font-weight: 500;
-  line-height: 77px;
+  line-height: 1.5;
   letter-spacing: -1.42px;
   color: var(--primary-white);
   max-width: 987px;
+  font-family: var(--primary-font );
 }
 
 h2 {
-  font-size: 36px;
+  font-size: var( --sub-heading-desktop);
+   font-family: var(--primary-font );
   font-style: normal;
-  font-weight: 700;
+  font-weight: 550;
   line-height: 44px;
+}
+h3 {
+  font-size: var( --card-heading-desktop);
+  font-style: normal;
+  font-weight: 550;
+  line-height: 1;
 }
 
 /* prevents floating footer*/
@@ -99,3 +114,41 @@ h2 {
   }
 }
 
+button {
+   /* Size */
+   width: 15.625rem;
+   height: 4.063rem;
+   /* Styling */
+
+   border: 4px solid #FFFFFF;
+   border-radius: 40px;
+   background-color: transparent; /* Zero opacity fill */
+   
+   /* Text styling */
+   font-family: var(--secondary-font);
+   font-weight: 600;
+   font-size: 1.5rem;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   margin: 0 auto;
+
+}
+
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+  color: var(--link-hover-two) !important;
+  border: 4px solid var(--link-hover-color)
+}
+
+button a {
+ color: #FFFFFF  !important;
+ text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  h1{
+    font-size: 3.25rem !important;
+  }
+}

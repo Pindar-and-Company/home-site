@@ -33,10 +33,7 @@
   transform: translate(-50%, -50%); /* Perfect center alignment */
   z-index: 2; /* Above overlay */
 
-  /* Typography */
-  font-family: var(--primary-font);
-  font-size: 64px;
-  font-weight: 700;
+
   color: #ffffff;
   margin: 0;
   text-align: center;
@@ -60,7 +57,7 @@
   position: relative; /* Changed from absolute */
   max-width: 1000px;
   width: 90%;
-  margin: 40px auto 0 auto; /* Add top margin to separate from header */
+  margin: 30px auto 0 auto; /* Add top margin to separate from header */
   padding: 0;
   border-radius: 12px;
   overflow: hidden;
@@ -70,6 +67,8 @@
 .services-tabs {
   display: flex;
   border-bottom: 1px solid #e9ecef;
+
+
 }
 
 .service-tab {
@@ -78,17 +77,27 @@
   background: none;
   border: none;
   font-family: var(--primary-font);
-  font-size: 22px;
+
   font-weight: 600;
-  color: #595757;
+
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   border-bottom: 3px solid transparent;
+
+   /* Override app.css button styles */
+   border-radius: 0px
+
+
 }
 
 .service-tab:hover {
-  color: var(--link-hover-two);
+  
+   /* Override app.css button styles */
+  border: 0px;
+  border-bottom: 3px solid transparent;
+
+ 
 }
 
 .service-tab.active {
@@ -115,11 +124,9 @@
 
 .service-description {
   font-family: var(--secondary-font);
-  font-size: 18px;
-  line-height: 1.8;
-  color: #495057;
+
   margin-bottom: 30px;
-  opacity: 0;
+
   transform: translateY(20px);
   animation: slideUp 0.5s ease forwards;
 }
@@ -173,7 +180,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
  
   
   .services-tabs {
@@ -183,7 +190,7 @@
   
   .service-tab {
     padding: 15px 20px;
-    font-size: 24px;
+
     border-bottom: 1px solid #e9ecef;
     border-right: none;
   }
@@ -205,7 +212,10 @@
     bottom: 0;
     width: 3px;
    
-    animation: slideIn 0.3s ease;
+    
+  }
+  .service-tab:hover{
+    border-bottom: 1px solid #e9ecef;
   }
   
   .services-pg-content {
@@ -214,7 +224,7 @@
   }
   
   .service-description {
-    font-size: 16px;
+    max-width: 100%;
     margin-bottom: 25px;
   }
 }
@@ -226,11 +236,8 @@
   
   .service-tab {
     padding: 12px 15px;
-    font-size: 15px;
+ 
   }
   
-  .service-description {
-    font-size: 15px;
-    line-height: 1.6;
-  }
+
 }

@@ -1,12 +1,13 @@
-.application-page {
+.contact-page {
     min-height: 100vh;
     padding: 60px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+  
   }
   
-  .application-header{
+  .contact-header{
     margin: 0 auto !important;  
     top: 0;
     left: 0;
@@ -15,16 +16,17 @@
     align-items: center;
     height: 390px;
     overflow: hidden;
+  
   }
   
-  .application-overlay{
+  .contact-overlay{
     background-color: rgba(0, 0, 0, 0.526) !important;
     width: 100%;
     height: 100%;
     position: absolute;
    }
 
-  .application-header-title {
+  .contact-header-title {
     position: absolute;
     top: 60%; /* Center vertically on the image */
     left: 50%; /* Center horizontally on the image */
@@ -37,7 +39,7 @@
     letter-spacing: 2px;
   }
   
-  .application-img{
+  .contact-img{
     object-fit:contain;
     position: absolute;
     width: 100vw;
@@ -45,38 +47,20 @@
     display: block;
   }
 
-  .app-grid{
-    margin: 0 !important;
-    padding: 0 !important;
-    margin-top: 300px !important;
-    width: 100vw !important;
+  .contact-form-section {
+    margin-top: 300px 
   }
+
+  @media (max-width: 816px) {
+    
+    .contact-img{
+      object-fit:cover;
+      height: 100%;
+      position: absolute;
+      width: 100vw;
+      z-index: -1;
+      display: block;
+    }
+  }
+
   
-.mobile-app-grid {
-  display: none
-}
-
-@media (max-width: 816px) {
-    
-  .application-img{
-    object-fit:cover;
-    height: 100%;
-    position: absolute;
-    width: 100vw;
-    z-index: -1;
-    display: block;
-  }
-}
-
-@media (max-width: 800px) {
-    
-  .mobile-app-grid {
-    display: inline;
-    margin: 0 !important;
-    padding: 0 !important;
-    margin-top: 300px !important;
-  }
-  .app-grid {
-    display: none
-  }
-}

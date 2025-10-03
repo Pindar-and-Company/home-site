@@ -45,12 +45,20 @@
   color: #19C5FF !important;
 }
 
-.contact-button{
-  height: 42px;
-  width: 150px;
+.nav-contact-button{
+
+  height: 42px ;
+  width: 140px ;
+  border: 1.5px solid white;
+
 }
 
 
+.nav-contact-button:hover {
+
+
+  border: 1.5px solid var(--link-hover-color)
+}
 
 
 /* targets only the dropdown */

@@ -55,7 +55,7 @@ function Navbar() {
             </Link>
           </li>
           <li className="navbar__desktop-menu-item">
-            <button className="contact-button"> 
+            <button className="nav-contact-button"> 
             <Link className="navbar__link" to={route_names.contact}>
               Contact Us
             </Link></button>

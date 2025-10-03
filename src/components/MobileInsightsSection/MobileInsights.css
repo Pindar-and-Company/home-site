@@ -6,7 +6,6 @@
    
     cursor: pointer;
     transition: box-shadow 0.3s ease;
-
   }
   
 
@@ -28,15 +27,14 @@
   }
   
   .mobile-article-date {
-    color: #6b7280;
-    font-size: 0.875rem;
+    color: #505358;
+    font-size: 1rem;
     margin-bottom: 0.75rem;
     font-weight: 500;
   }
   
   .mobile-article-title {
-    font-size: 1.25rem;
-    font-weight: 300;
+   
     color: #1f2937;
     line-height: 1.375;
     margin: 0;

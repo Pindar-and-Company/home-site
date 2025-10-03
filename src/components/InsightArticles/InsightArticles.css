@@ -27,18 +27,18 @@
 
   .insight-article-title {
     position: absolute;
-    top: 60%; /* Center vertically on the image */
+    top: 50%; /* Center vertically on the image */
     left: 50%; /* Center horizontally on the image */
     transform: translate(-50%, -50%); /* Perfect center alignment */
     /* Typography */
     font-family: var(--primary-font, );
-    font-size: 64px;
-    font-weight: 700;
+  
     color: #ffffff;
     margin: 0;
     text-align: center;
     /* Text styling for better visibility */
     letter-spacing: 2px;
+    width: 70%;
   }
 
   .insight-detials{
@@ -47,9 +47,13 @@
     top: 90%; /* Center vertically on the image */
     left: 50%; /* Center horizontally on the image */
     transform: translate(-50%, -50%); /* Perfect center alignment */
-    color: #ffffff;
+    
     font-weight: 500;
     gap: 1rem;
+   }
+   .insight-detials p{
+    color: #ffffff !important;
+    font-family: var(--primary-font);
    }
 
   .article-image-container img{
@@ -65,7 +69,7 @@
   }
 
   .article-body {
-    line-height: 1.8;
+    
     color: black;
     margin-top: 20px;
 
@@ -74,7 +78,7 @@
   }
   
   .article-paragraph {
-    font-size: 1.125rem;
+
     margin-bottom: 1.5rem;
     text-align: justify;
     max-width: 60%;
@@ -90,6 +94,20 @@
     padding:24px
   }
 
+  .article-link {
+    color: var(--link-hover-two, #007bff);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 1.25rem;
+   
+  }
+  
+  .article-link:hover {
+    color: var(--link-hover-color, #0056b3);
+  }
+.mobile-insight-detials {
+  display: none;
+}
   @media (max-width: 900px) {
 
     .article-body {
@@ -101,7 +119,7 @@
     }
     
     .article-paragraph {
-      font-size: 1.125rem;
+
       text-align: left;
       max-width:  100%;;
       width: 100%;
@@ -111,4 +129,27 @@
     
   }
 
+  @media (max-width: 650px) {
+    .insight-article-title {
+      letter-spacing: 1px;
+      line-height: 1;
+
+    }
+   
+    .insight-detials {
+      display: none;
+    }
+    .mobile-insight-detials {
+      display: inline;
+      
+      gap: 1rem;
+    }
+    .mobile-insight-detials p{
+     color:black ;
+     font-weight: 450;
+
+    }
  
+
+ 
+  }
