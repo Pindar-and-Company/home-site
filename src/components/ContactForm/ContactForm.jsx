@@ -30,9 +30,9 @@ import './ContactForm.css';
   return (
     <div className="contact-form-wrapper">
       <div className="contact-form-container">
-        <h1 className="contact-form-title">
+        <h2 className="contact-form-title">
           Ready to take the next step? Contact us.
-        </h1>
+        </h2>
         
         <p className="contact-form-required">*Required field</p>
 
