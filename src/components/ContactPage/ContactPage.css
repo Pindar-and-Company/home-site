@@ -1,6 +1,6 @@
 .contact-page {
     min-height: 100vh;
-    padding: 60px 20px;
+    padding: 60px 20px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,6 +51,9 @@
     margin-top: 300px 
   }
 
+  .success-insights{
+    margin-top: 250px;
+  }
   @media (max-width: 816px) {
     
     .contact-img{
