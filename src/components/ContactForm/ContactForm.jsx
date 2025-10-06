@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+
+import React, { useState, useRef, useEffect } from 'react';
 import './ContactForm.css';
+import supabase from "../../utils/supabaseClient.js";
+
+
 
  function ContactForm() {
   const [formData, setFormData] = useState({
@@ -10,8 +14,9 @@ import './ContactForm.css';
     jobTitle: '',
     country: '',
     message: '',
-    marketingConsent: false
+   
   });
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -19,13 +24,102 @@ import './ContactForm.css';
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
+     // Clear error when user starts typing
+     if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
-  const handleSubmit = (e) => {
+
+
+  const formRef = useRef(null);
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
+     // Validate form
+
+     const newErrors = {};
+    // Ensure required feilds are filled 
+    if (formData.firstName.trim() === '') {
+      newErrors.firstName = 'First name required';
+    }
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = 'Last name required';
+    }
+    
+    if (!formData.company.trim()) {
+      newErrors.company = 'Company required';
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Email address is invalid';
+    }
+
+     // If there are errors, set them and don't submit
+     if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+    
+    // Clear errors and submit
+    setErrors({});
+
+   
+    // DB Insert
+     // Submit to Supabase
+  const { data, error } = await supabase
+  .from('contact_form_response').insert([
+    {
+      first_name: formData.firstName.trim(),
+      last_name: formData.lastName.trim(),
+      email: formData.email.trim(),
+      job_title: formData.jobTitle.trim(),
+      company: formData.company.trim(),
+      message: formData.message.trim(),
+   
+    }
+  ]);
+
+if (error) {
+  console.error("Error:", error);
+  alert('Failed to submit form. Please try again.');
+} else {
+  console.log("Data submitted successfully:", data);
+  alert('Form submitted successfully!');
+  // Reset form
+  setFormData({
+    firstName: '',
+    lastName: '',
+    company: '',
+    email: '',
+    jobTitle: '',
+    country: '',
+    message: '',
+    marketingConsent: false
+  });
+}
+};
+ 
+
+
+useEffect(() => {
+  const form = formRef.current;
+  
+  if (form) {
+    form.addEventListener('submit', handleSubmit);
+  }
+
+  return () => {
+    if (form) {
+      form.removeEventListener('submit', handleSubmit);
+    }
   };
+}, [formData]);
+
 
   return (
     <div className="contact-form-wrapper">
@@ -36,7 +130,7 @@ import './ContactForm.css';
         
         <p className="contact-form-required">*Required field</p>
 
-        <div className="contact-form">
+        <div  ref={formRef} onSubmit={handleSubmit} className="contact-form">
           <div className="form-grid">
             {/* First Name */}
             <div className="form-field">
@@ -51,6 +145,15 @@ import './ContactForm.css';
                 required
                 className="form-input"
               />
+              {errors.firstName && (
+                <p className="error-message">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="error-icon">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                  </svg>
+                  Error: {errors.firstName}
+                </p>
+              )}
             </div>
 
             {/* Last Name */}
@@ -66,6 +169,15 @@ import './ContactForm.css';
                 required
                 className="form-input"
               />
+              {errors.lastName && (
+                <p className="error-message">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="error-icon">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                  </svg>
+                  Error: {errors.lastName}
+                </p>
+              )}
             </div>
 
             {/* Company */}
@@ -81,6 +193,15 @@ import './ContactForm.css';
                 required
                 className="form-input"
               />
+              {errors.company && (
+                <p className="error-message">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="error-icon">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                  </svg>
+                  Error: {errors.company}
+                </p>
+              )}
             </div>
 
             {/* Email */}
@@ -97,6 +218,16 @@ import './ContactForm.css';
         
                 className="form-input"
               />
+               {errors.email && (
+                <p className="error-message">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="error-icon">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                  </svg>
+                  Error: {errors.email}
+                </p>
+              )}
+              
             </div>
 
             {/* Job Title */}

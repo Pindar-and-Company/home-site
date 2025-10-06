@@ -175,10 +175,8 @@ footer .dropdown-menu{
 }  
 
 
-
-
 /* Tablet styling */
-@media (max-width: 1040px) {
+@media (max-width: 1110px) {
   /* Adjust the footer links container */
   .footer-links {
     
@@ -203,7 +201,7 @@ footer .dropdown-menu{
 
  
 /*Large Mobile styling - Medium Tablet*/
-@media  (min-width: 500px) and (max-width: 830px) {
+@media  (min-width: 500px) and (max-width: 880px) {
   .mini-footer {
     display: block;
   }

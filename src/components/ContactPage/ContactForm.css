@@ -1,6 +1,5 @@
 .contact-form-wrapper {
     min-height: 100vh;
-    background-color: #f9fafb;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,7 +28,23 @@
     font-size: 0.875rem;
     margin-bottom: 2rem;
   }
-  
+  .succsess-img{
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    
+
+    
+  }
+
+  .succsess-image{
+    object-fit: cover;
+  }
+
+  .succsess-contact-form-title{ 
+  margin-top: -2%;
+  }
   .contact-form {
     display: flex;
     flex-direction: column;
@@ -187,7 +202,7 @@
     }
   
     .form-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns:  1fr;
     }
   
     .form-footer {
@@ -196,7 +211,11 @@
     }
   
     .submit-button {
-      width: 100%;
+      width:75%;
+    }
+    .form-field-full {
+
+      width: 85%;
     }
   }
   
