@@ -53,7 +53,7 @@ align-items: center;
 }
 .intro-section p{
   font-family: var(--secondary-font);
-  font-size: 24px;
+
   font-style: normal;
   font-weight: 400;
   color: var(--primary-white);
@@ -149,20 +149,6 @@ align-items: center;
 
 }
 
-@media (max-width: 770px) {
-  .intro-section h1 {
- 
-      /*font-size: var(--heading-mobile); */
-     
-  }
-  .intro-section p {
-    
-
-  }
-
- 
-  
-}
 
 /* For large desktop screens*/
 @media (min-width: 2000px) {
@@ -201,9 +187,14 @@ align-items: center;
     .dark-overlay {
       display: none;
     }
+    .intro-section{
+      height:  fit-content;
+      
+    }
     .intro-section p{
      padding-top: 20px;
      padding-bottom: 50px;
+     
     }
 
     .intro-section h1{
@@ -212,6 +203,7 @@ align-items: center;
      margin: 0 auto;
      text-align: center;
      white-space: normal;
+
 
 
     }
@@ -230,9 +222,13 @@ align-items: center;
       right: 0;
 
       background-color: rgba(0, 0, 0, 1);
-      height: 60vh;
+      min-height: 85vh !important;
+      
       margin-top: -1%;
       width: 100vw;
+      display: inline-block !important;
+
+
       
    
     }
@@ -257,6 +253,9 @@ align-items: center;
 
     }
   
+    .mobile-applications-section{
+      margin-top: 250px
+    }
    
    
 }
@@ -268,26 +267,17 @@ align-items: center;
   .mobile_background_card{
   
  
-    height: 65vh;
+
     margin-top: -1.5%;
 
  
   }
-}
-@media screen and (max-width: 342px){
-  .background-img {
-    height: 20vh;
+  .mobile-applications-section{
+    margin-top: 170px
   }
-  .mobile_background_card{
-  
- 
-    height: 75vh;
-    margin-top: -1.5%;
 
- 
-  }
-  
 }
+
 
 @media screen and (max-width: 800px){
   .applications-section{
