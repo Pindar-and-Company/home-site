@@ -35,7 +35,7 @@ function HomeView() {
                      </div>
           
                     <button className="learn-more-button">
-                    <Link to="" target="_blank">Learn More</Link> </button> 
+                    <Link to="/about-us" >Learn More</Link> </button> 
                   
                     </div>
                     </section>
