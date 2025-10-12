@@ -72,13 +72,11 @@ align-items: center;
   position: absolute;
   top: 0;
   right: 0;
-  max-height: 90vh;
+  height: 90vh;
   width: 100vw !important;
   object-fit: cover;
   pointer-events: none;
   z-index: -1;
-  
-
   
 }
 
@@ -192,8 +190,8 @@ align-items: center;
       
     }
     .intro-section p{
-     padding-top: 20px;
-     padding-bottom: 50px;
+      padding-top: 1.25rem;
+      padding-bottom: 3.125rem;
      
     }
 
@@ -294,4 +292,57 @@ align-items: center;
    .home-insights-section{
     display: none;
    }
+}
+
+
+
+@media only screen and (max-width: 700px) and (orientation: landscape) {
+  /* CSS rules for mobile devices (max-width: 800px) in landscape orientation */
+  .main-hero{
+    display: inline-block;
+    height: 100% !important;
+    min-height: 90vh !important;
+  
+  
+  }
+  .background-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 90vh;
+    width: 100vw !important;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
+    
+  }
+  
+  
+  
+  .dark-overlay {
+    height: 100%;
+  }
+
+
+.background-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+
+  
+}
+.intro-section p{
+  padding-top: 1.25rem;
+  padding-bottom: 3.125rem;
+
+ }
+
+ .learn-more-button {
+  margin-bottom: 1.7rem;
+ }
+
+
+  
+ 
 }
