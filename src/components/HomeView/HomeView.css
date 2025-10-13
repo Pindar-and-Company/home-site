@@ -220,11 +220,12 @@ align-items: center;
       right: 0;
 
       background-color: rgba(0, 0, 0, 1);
-      min-height: 85vh !important;
+
       
       margin-top: -1%;
       width: 100vw;
       display: inline-block !important;
+      
 
 
       
@@ -232,17 +233,18 @@ align-items: center;
     }
     .main-hero{
       position: relative;
-      height: 100vh;
+      height: auto; /* Changed from 100vh to auto */
+      min-height: fit-content; /* Only take needed space */
       width: 100%;
       padding: 0;
-      margin-bottom: none;
+
       top: 0 !important;
       right: 0 !important;
-     overflow: visible;
+      overflow: visible;
     }
     .background-img {
  
-      max-height: 40vh;
+      height: 30vh;
       width: 100vw !important;
       object-fit: cover;
       pointer-events: none;
@@ -252,8 +254,12 @@ align-items: center;
     }
   
     .mobile-applications-section{
-      margin-top: 250px
+     margin-top: 5rem;
     }
+    .learn-more-button {
+      margin-bottom: 1.7rem;
+     }
+    
    
    
 }
@@ -271,7 +277,7 @@ align-items: center;
  
   }
   .mobile-applications-section{
-    margin-top: 170px
+
   }
 
 }
