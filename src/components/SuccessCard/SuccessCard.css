@@ -6,13 +6,13 @@
     height: 400px;
     margin: 0 auto;
     overflow: hidden;
-    margin-top: 90px;
-
+ 
     top: 0;
     left: 0;
     right: 0;
+    margin-bottom: 200px;
 
-    position: absolute;
+  
   }
   
   .success-content {
@@ -139,9 +139,9 @@
       margin-top: 0;
      
     }
-    .success-image img{
+    .mobile-success-image img{
  
-      height: 300px !important;
+      height:35vh !important;
 
     }
 

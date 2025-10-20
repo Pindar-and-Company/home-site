@@ -62,7 +62,9 @@
   
 
 
-
+.services-content a{
+  text-decoration: none;
+}
 
   .services-list {
     display: flex;
@@ -97,7 +99,7 @@
   
   .service-text p {
     font-family: var(--secondary-font, 'Arial', sans-serif);
-    font-size: 18px;
+    font-size: 1.12rem;
     font-weight: 400;
     color: #e6e2e2;
     margin: 0;
@@ -203,5 +205,7 @@
       position: absolute;
   
     }  
+
     
   }
+

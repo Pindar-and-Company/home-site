@@ -14,7 +14,7 @@ function ContactSection() {
       <div className="contact-content">
         <h2>How can we assist you?</h2>
         <button className="contact-button">
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/contact-us">Contact Us</Link>
         </button>
       </div>
       <div className="contact-image">

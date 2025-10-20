@@ -8,8 +8,7 @@ import ScrollToTop from '../../ScrollToTop';
 
 import { useLocation } from 'react-router-dom';
 import SuccessSection from '../SuccessCard/SuccessCard'
-import InsightsSection from '../InsightsSection/InsightsSection';
-import MobileInsights from'../MobileInsightsSection/MobileInsights'
+
 
 const HeaderImg = 'https://images.unsplash.com/photo-1566316166385-9237c2213471?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 function ContactPage() {

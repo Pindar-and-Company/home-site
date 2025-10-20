@@ -1,23 +1,19 @@
 .contact-page {
-    min-height: 100vh;
-    padding: 60px 20px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
+  position: relative;
   }
   
   .contact-header{
-    margin: 0 auto !important;  
+    margin: 0 auto;
     top: 0;
     left: 0;
     right: 0;
-    position: absolute;
+    position: relative; /* Changed from absolute */
     align-items: center;
-    height: 390px;
+    height: 300px;
     overflow: hidden;
   
   }
+
   
   .contact-overlay{
     background-color: rgba(0, 0, 0, 0.526) !important;
@@ -48,12 +44,11 @@
   }
 
   .contact-form-section {
-    margin-top: 300px 
+    margin-top: 70px ;
+    margin-bottom: 50px;
   }
 
-  .success-insights{
-    margin-top: 250px;
-  }
+
   @media (max-width: 816px) {
     
     .contact-img{
@@ -66,4 +61,10 @@
     }
   }
 
-  
+
+  @media (max-width: 480px) {
+  .contact-header{
+    height: 30vh;
+  }
+  }
+

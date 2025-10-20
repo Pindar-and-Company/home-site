@@ -86,7 +86,10 @@
   border-bottom: 3px solid transparent;
 
    /* Override app.css button styles */
-   border-radius: 0px
+   border-radius: 0px;
+   color: black;
+
+   
 
 
 }
@@ -96,6 +99,7 @@
    /* Override app.css button styles */
   border: 0px;
   border-bottom: 3px solid transparent;
+
 
  
 }
@@ -190,7 +194,7 @@
   
   .service-tab {
     padding: 15px 20px;
-
+ 
     border-bottom: 1px solid #e9ecef;
     border-right: none;
   }
@@ -216,6 +220,7 @@
   }
   .service-tab:hover{
     border-bottom: 1px solid #e9ecef;
+   
   }
   
   .services-pg-content {
@@ -238,6 +243,9 @@
     padding: 12px 15px;
  
   }
-  
+
+  .service-header {
+    height: 30vh;
+  }
 
 }

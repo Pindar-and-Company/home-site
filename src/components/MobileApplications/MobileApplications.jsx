@@ -9,18 +9,15 @@ import ApplicationsData from '../../data_obj/ApplicationData';
 function ApplicationCard({ content }) {
   const navigate = useNavigate();
   
-  const handleAppClick = (appId) => {
-    navigate(`/application/${appId}`);
-  };
 
   return (
     <div className='applications-click-card'>
-    <Link to={`/application/${content.id}`}><div className={`mobile-application-card ${content.className}`}>
+    <Link to={`/applications/${content.id}`}><div className={`mobile-application-card ${content.className}`}>
       <div className="mobile-application-image-wrapper">
         <img src={content.image} alt={content.imageAlt} 
         className="mobile-application-image"/>
       </div>
-      <div className="mobile-application-content" onClick={() => handleAppClick(content.id)}>
+      <div className="mobile-application-content" >
         <h3>{content.title}</h3>
         <p>{content.description}</p>
       

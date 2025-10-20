@@ -35,7 +35,7 @@ function HomeView() {
                      </div>
           
                     <button className="learn-more-button">
-                    <Link to="" target="_blank">Learn More</Link> </button> 
+                    <Link to="/about-us" >Learn More</Link> </button> 
                   
                     </div>
                     </section>
@@ -53,6 +53,8 @@ function HomeView() {
             <section className="services-section">
                 <ServicesSection />
             </section>
+         {/* TEMPORARY REMOVAL OF INSIGHTS
+         NOTE: REMEMEBER TO REMOVE EXTRA BOTTOM MARG ON SERVIES
 
             <section className='home-insights-section'>
                <div className="home-insights">
@@ -65,6 +67,8 @@ function HomeView() {
             <h2 className='main-heading'>Insights</h2>
                 <MobileInsights/> </div>
             </section>
+            */}
+
             <section className="contact-section">
                 <ContactSection />
             </section> 

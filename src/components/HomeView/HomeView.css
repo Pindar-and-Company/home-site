@@ -53,7 +53,7 @@ align-items: center;
 }
 .intro-section p{
   font-family: var(--secondary-font);
-  font-size: 24px;
+
   font-style: normal;
   font-weight: 400;
   color: var(--primary-white);
@@ -72,13 +72,11 @@ align-items: center;
   position: absolute;
   top: 0;
   right: 0;
-  max-height: 90vh;
+  height: 90vh;
   width: 100vw !important;
   object-fit: cover;
   pointer-events: none;
   z-index: -1;
-  
-
   
 }
 
@@ -149,20 +147,6 @@ align-items: center;
 
 }
 
-@media (max-width: 770px) {
-  .intro-section h1 {
- 
-      /*font-size: var(--heading-mobile); */
-     
-  }
-  .intro-section p {
-    
-
-  }
-
- 
-  
-}
 
 /* For large desktop screens*/
 @media (min-width: 2000px) {
@@ -201,9 +185,15 @@ align-items: center;
     .dark-overlay {
       display: none;
     }
+    .intro-section{
+      height:  fit-content;
+      
+    }
     .intro-section p{
-     padding-top: 20px;
-     padding-bottom: 50px;
+      padding-top: 1.25rem;
+      padding-bottom: 3.125rem;
+      font-size: 1.25rem;
+     
     }
 
     .intro-section h1{
@@ -212,7 +202,6 @@ align-items: center;
      margin: 0 auto;
      text-align: center;
      white-space: normal;
-
 
     }
 
@@ -228,27 +217,24 @@ align-items: center;
     .mobile_background_card{
       top: 0;
       right: 0;
-
       background-color: rgba(0, 0, 0, 1);
-      height: 60vh;
       margin-top: -1%;
       width: 100vw;
-      
+      display: inline-block !important;
    
     }
     .main-hero{
       position: relative;
-      height: 100vh;
+      height: auto; /* Changed from 100vh to auto */
+      min-height: fit-content; /* Only take needed space */
       width: 100%;
       padding: 0;
-      margin-bottom: none;
       top: 0 !important;
       right: 0 !important;
-     overflow: visible;
+      overflow: visible;
     }
     .background-img {
- 
-      max-height: 40vh;
+      height: 30vh;
       width: 100vw !important;
       object-fit: cover;
       pointer-events: none;
@@ -257,37 +243,29 @@ align-items: center;
 
     }
   
+    .mobile-applications-section{
+     margin-top: 5rem;
+    }
+    .learn-more-button {
+      margin-bottom: 1.7rem;
+     }
+    
    
    
 }
 
-@media screen and (max-width: 425px){
-  .background-img {
-    height: 30vh;
-  }
-  .mobile_background_card{
-  
+@media screen and (max-width: 475px){
  
-    height: 65vh;
+  .mobile_background_card{
+
     margin-top: -1.5%;
 
  
   }
-}
-@media screen and (max-width: 342px){
-  .background-img {
-    height: 20vh;
-  }
-  .mobile_background_card{
-  
  
-    height: 75vh;
-    margin-top: -1.5%;
 
- 
-  }
-  
 }
+
 
 @media screen and (max-width: 800px){
   .applications-section{
@@ -304,4 +282,61 @@ align-items: center;
    .home-insights-section{
     display: none;
    }
+}
+
+
+
+@media only screen and  (orientation: landscape) {
+  /* CSS rules for mobile devices (max-width: 800px) in landscape orientation */
+  .main-hero{
+    display: inline-block;
+    height: 100% !important;
+    min-height: 90vh !important;
+  
+  
+  }
+  .background-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 90vh;
+    width: 100vw !important;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
+    
+  }
+  
+  
+  
+  .dark-overlay {
+    height: 100%;
+  }
+
+
+.background-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+
+  
+}
+.intro-section p{
+  padding-top: 1.25rem;
+  padding-bottom: 3.125rem;
+
+ }
+
+ .learn-more-button {
+  margin-bottom: 1.7rem;
+ }
+
+
+  
+ 
+}
+
+.services-section{
+  margin-bottom: 130px !important;
 }
