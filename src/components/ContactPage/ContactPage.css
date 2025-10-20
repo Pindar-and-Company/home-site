@@ -44,12 +44,11 @@
 
   .contact-form-section {
     margin-top: 70px ;
+    
     margin-bottom: 50px;
   }
 
-  .success-insights{
-    margin-top: 250px;
-  }
+
   @media (max-width: 816px) {
     
     .contact-img{

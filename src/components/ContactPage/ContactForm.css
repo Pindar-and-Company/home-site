@@ -1,14 +1,16 @@
 .contact-form-wrapper {
-    min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 1.5rem;
+  
    
   }
   
   .contact-form-container {
-    width: 60vw;
+    width: 60vw; 
+    
 
     max-width: 1200px;
     background-color: #f5f5f5;
@@ -24,6 +26,9 @@
     color: #000;
   }
   
+
+
+  
   .contact-form-required {
     font-size: 0.875rem;
     margin-bottom: 2rem;
@@ -34,7 +39,6 @@
     overflow: hidden;
     object-fit: cover;
     
-
     
   }
 
@@ -93,6 +97,11 @@
     font-size: 1rem;
     transition: border-color 0.2s;
   }
+  
+
+
+
+
   
   .form-input:focus,
   .form-select:focus,
@@ -191,6 +200,10 @@
   }
   
   
+
+
+
+  
   /* Responsive Design */
   @media (max-width: 768px) {
     .contact-form-container {
@@ -226,10 +239,7 @@
   }
   
   @media (max-width: 480px) {
-    .contact-form-container {
 
-    }
-  
     .contact-form-title {
       font-size: 1.75rem;
     }
@@ -246,6 +256,3 @@
     }
   }
 
-  @media (max-width: 600px) {
-  
-  }
