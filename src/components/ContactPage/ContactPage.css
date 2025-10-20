@@ -13,6 +13,7 @@
     overflow: hidden;
   
   }
+
   
   .contact-overlay{
     background-color: rgba(0, 0, 0, 0.526) !important;
@@ -44,7 +45,6 @@
 
   .contact-form-section {
     margin-top: 70px ;
-    
     margin-bottom: 50px;
   }
 
