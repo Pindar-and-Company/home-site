@@ -88,6 +88,7 @@
    /* Override app.css button styles */
    border-radius: 0px;
    color: black;
+
    
 
 
@@ -98,6 +99,7 @@
    /* Override app.css button styles */
   border: 0px;
   border-bottom: 3px solid transparent;
+
 
  
 }
@@ -218,7 +220,7 @@
   }
   .service-tab:hover{
     border-bottom: 1px solid #e9ecef;
-    color: black !important;
+   
   }
   
   .services-pg-content {
