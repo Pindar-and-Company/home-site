@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-
+import { useSearchParams } from 'react-router-dom';
 import './Services.css';
 
 //import ProcessSection from '../OurProcess/OurProcess'
@@ -11,18 +11,23 @@ const  HeaderImg = 'https://images.unsplash.com/photo-1617727553230-35c143f84010
 function ServicesPage() {
 
   const location = useLocation(); // Get the current URL
-
-  /*useEffect(() => {
-    if (location.pathname.startsWith('/applications/')) {
-      const tag = location.pathname.split('/').pop(); // Extract tag from URL
-      const element = document.getElementById(tag);
-      if (element) {
-        element.scrollIntoView({behavior: 'instant'});
-      }
-    }
-  }, [location]);*/
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const [activeTab, setActiveTab] = useState('system-design');
+
+    // Set active tab from URL parameter on mount and when it changes
+    useEffect(() => {
+      const tabParam = searchParams.get('tab');
+      if (tabParam && servicesData[tabParam]) {
+        setActiveTab(tabParam);
+      }
+    }, [searchParams]);
+  
+    // Update URL when tab changes
+    const handleTabChange = (key) => {
+      setActiveTab(key);
+      setSearchParams({ tab: key });
+    };
 
   const servicesData = {
     'system-design': {
@@ -59,6 +64,7 @@ function ServicesPage() {
     }
   };
 
+  
   return (
     <div className="services-page">
       <div className="service-header">
@@ -82,7 +88,7 @@ function ServicesPage() {
               key={key}
               /* Sets the active tab to service name or key */
               className={`service-tab ${activeTab === key ? 'active' : ''}`}
-              onClick={() => setActiveTab(key)}
+              onClick={() => handleTabChange(key)}
             >
               {service.title}
             </button>

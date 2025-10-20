@@ -62,7 +62,9 @@
   
 
 
-
+.services-content a{
+  text-decoration: none;
+}
 
   .services-list {
     display: flex;

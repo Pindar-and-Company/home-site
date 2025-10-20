@@ -54,10 +54,15 @@ function ServicesSection() {
                 onMouseEnter={() => setActiveService(service.id)}
                
               >
-                <div className="service-text"  onClick={() => handleClick(service.route)} >
+                
+
+                <div className="service-text" >
+                <Link to={`/services/?tab=${service.route}`}>
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
+                  </Link>
                 </div>
+           
                 <div className="service-arrow">
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
                     <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -65,6 +70,7 @@ function ServicesSection() {
                 </div>
                 <div className="service-underline"></div>
               </div>
+              
             ))}
           </div>
       
