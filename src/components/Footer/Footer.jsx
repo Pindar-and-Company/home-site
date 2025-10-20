@@ -37,9 +37,11 @@ function Footer() {
            <li>
               <Link to={route_names.about_us}>About Us</Link>
             </li>
+            {/*
             <li>
               <Link to={route_names.insights}>Insights</Link>
             </li> 
+            */}
             <li>
               <Link to={route_names.contact}>Contact Us</Link>
             </li>
@@ -80,12 +82,15 @@ function Footer() {
            <li>
               <Link to={route_names.about_us}>About Us</Link>
             </li>
+            {/*
             <li>
               <Link to={route_names.insights}>Insights</Link>
             </li> 
+                     */}
             <li>
               <Link to={route_names.contact}>Contact Us</Link>
             </li>
+   
             
           </ul>
         </div>
