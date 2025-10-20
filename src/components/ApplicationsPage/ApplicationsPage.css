@@ -1,19 +1,17 @@
 .application-page {
-    min-height: 100vh;
-    padding: 60px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    position: relative;
+
   }
   
   .application-header{
-    margin: 0 auto !important;  
+    margin: 0 auto;
     top: 0;
     left: 0;
     right: 0;
-    position: absolute;
+    position: relative; /* Changed from absolute */
     align-items: center;
-    height: 390px;
+    height: 300px;
     overflow: hidden;
   }
   
@@ -47,13 +45,22 @@
 
   .app-grid{
     margin: 0 !important;
-    padding: 0 !important;
-    margin-top: 300px !important;
-    width: 100vw !important;
+
+    margin-top: 100px !important;
+
   }
   
 .mobile-app-grid {
   display: none
+}
+
+@media (max-width: 1250px) {
+  
+  .app-grid{
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+   }
+
 }
 
 @media (max-width: 816px) {
@@ -71,12 +78,23 @@
 @media (max-width: 800px) {
     
   .mobile-app-grid {
-    display: inline;
+    display: block;
     margin: 0 !important;
     padding: 0 !important;
-    margin-top: 300px !important;
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+
+
   }
   .app-grid {
     display: none
   }
+
+
+
+}
+@media (max-width: 480px) {
+.application-header{
+  height: 30vh;
+ }
 }
