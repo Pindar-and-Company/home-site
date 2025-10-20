@@ -87,7 +87,7 @@
   .form-textarea {
     width: 100%;
     padding: 1rem 1.5rem;
-    border: 2px solid #9ca3af;
+    border: .5px solid #c8c8c9;
     border-radius: 40px;
     background-color: white;
     font-size: 1rem;
@@ -194,7 +194,9 @@
   /* Responsive Design */
   @media (max-width: 768px) {
     .contact-form-container {
-      padding: 2rem;
+      width: 85vw !important;
+      margin-left: 25px;
+      margin-right: 25px;
     }
   
     .contact-form-title {
@@ -213,15 +215,19 @@
     .submit-button {
       width:75%;
     }
+    .form-field {
+      width: 90%;
+    }
     .form-field-full {
 
       width: 85%;
     }
+   
   }
   
   @media (max-width: 480px) {
     .contact-form-container {
-      padding: 1.5rem;
+
     }
   
     .contact-form-title {
@@ -238,4 +244,8 @@
       padding: 0.875rem 2rem;
       font-size: 1rem;
     }
+  }
+
+  @media (max-width: 600px) {
+  
   }
