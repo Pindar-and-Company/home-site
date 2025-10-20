@@ -53,6 +53,8 @@ function HomeView() {
             <section className="services-section">
                 <ServicesSection />
             </section>
+         {/* TEMPORARY REMOVAL OF INSIGHTS
+         NOTE: REMEMEBER TO REMOVE EXTRA BOTTOM MARG ON SERVIES
 
             <section className='home-insights-section'>
                <div className="home-insights">
@@ -65,6 +67,8 @@ function HomeView() {
             <h2 className='main-heading'>Insights</h2>
                 <MobileInsights/> </div>
             </section>
+            */}
+
             <section className="contact-section">
                 <ContactSection />
             </section> 
