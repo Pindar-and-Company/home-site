@@ -203,8 +203,6 @@ align-items: center;
      text-align: center;
      white-space: normal;
 
-
-
     }
 
     .learn-more-button {
@@ -219,17 +217,10 @@ align-items: center;
     .mobile_background_card{
       top: 0;
       right: 0;
-
       background-color: rgba(0, 0, 0, 1);
-
-      
       margin-top: -1%;
       width: 100vw;
       display: inline-block !important;
-      
-
-
-      
    
     }
     .main-hero{
@@ -238,13 +229,11 @@ align-items: center;
       min-height: fit-content; /* Only take needed space */
       width: 100%;
       padding: 0;
-
       top: 0 !important;
       right: 0 !important;
       overflow: visible;
     }
     .background-img {
- 
       height: 30vh;
       width: 100vw !important;
       object-fit: cover;
@@ -266,20 +255,14 @@ align-items: center;
 }
 
 @media screen and (max-width: 425px){
-  .background-img {
-    height: 30vh;
-  }
-  .mobile_background_card{
-  
  
+  .mobile_background_card{
 
     margin-top: -1.5%;
 
  
   }
-  .mobile-applications-section{
-
-  }
+ 
 
 }
 
