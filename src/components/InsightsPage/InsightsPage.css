@@ -1,19 +1,15 @@
 .insights-page {
-  min-height: 100vh;
-  padding: 60px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
 .insights-header{
-  margin: 0 auto !important;  
+  margin: 0 auto;
   top: 0;
   left: 0;
   right: 0;
-  position: absolute;
+  position: relative; /* Changed from absolute */
   align-items: center;
-  height: 390px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -54,17 +50,25 @@
 .insights-articles{
   margin: 0 !important;
   padding: 0 !important;
-  margin-top: 300px !important;
+  margin-top: 100px !important;
+  margin-bottom: 80px !important;
   width: 100vw !important;
 }
 
 
 /* For large desktop screens*/
-@media (max-width: 501px) {
+@media (max-width: 800px) {
   .insights-articles{
-  
-     margin-top: 330px !important;
+     margin-top: 50px !important;
 
   }
  
 }
+
+/* For large desktop screens*/
+@media (max-width: 480px) {
+  .insights-header{
+    height: 30vh;
+  }
+}
+
