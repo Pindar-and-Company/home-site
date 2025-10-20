@@ -29,6 +29,7 @@ function MobileSlidingMenu({ buttonId, menuId, buttonIcon, menuItems }) {
      
 
   };
+  
 
     // Lock background scroll while allowing menu scroll
     useEffect(() => {

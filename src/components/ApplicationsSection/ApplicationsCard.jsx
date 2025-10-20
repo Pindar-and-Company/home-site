@@ -13,9 +13,7 @@ function ApplicationsGrid({ slice_value }) {
  
   const navigate = useNavigate();
 
-  const handleAppClick = (appId) => {
-      navigate(`/applications/${appId}`);
-   };
+
   
 
   return (
@@ -32,22 +30,22 @@ function ApplicationsGrid({ slice_value }) {
               </div>
              
               {/* Content second */}
-              <div className="application-content"  onClick={() => handleAppClick(app.id)}>
+              <div className="application-content" >
                 <h2>{app.title}</h2>
                 <p>{app.description}</p>
                 <button className="application-learn-more-button">
-                  <Link to={handleAppClick(app.id)}>Learn More</Link>
+                  <Link to={`/applications/${app.id}`}>Learn More</Link>
                 </button>
               </div>
             </>
           ) : (
             <>
               {/* Content first */}
-              <div className="application-content"  onClick={() => handleAppClick(app.id)}>
+              <div className="application-content"  >
                 <h2>{app.title}</h2>
                 <p>{app.description}</p>
                 <button className="application-learn-more-button">
-                  <Link to={handleAppClick(app.id)}>Learn More</Link>
+                  <Link to={`/applications/${app.id}`}>Learn More</Link>
                 </button>
               </div>
               {/* Image second */}

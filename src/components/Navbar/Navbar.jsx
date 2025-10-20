@@ -28,6 +28,10 @@ function Navbar() {
     };
   }, []);
 
+    const handleLogoClick = () => {
+    navigate("/");
+  };
+
   return (
     <nav className="navbar">
       <Link to="/">
