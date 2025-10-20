@@ -14,7 +14,7 @@ function ApplicationsGrid({ slice_value }) {
   const navigate = useNavigate();
 
   const handleAppClick = (appId) => {
-      navigate(`/application/${appId}`);
+      navigate(`/applications/${appId}`);
    };
   
 
