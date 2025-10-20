@@ -49,11 +49,13 @@ function Navbar() {
               About Us
             </Link>
           </li>
+          {/*
           <li className="navbar__desktop-menu-item">
             <Link className="navbar__link" to={route_names.insights}>
               Insights
             </Link>
           </li>
+          */}
           <li className="navbar__desktop-menu-item">
             <button className="nav-contact-button"> 
             <Link className="navbar__link" to={route_names.contact}>
@@ -61,8 +63,6 @@ function Navbar() {
             </Link></button>
           </li>
           
-          
-         
         </ul>
       )}
       {isMobileMenuOpen && (
@@ -92,13 +92,14 @@ function Navbar() {
                 navigate(route_names.about_us);
               },
             },
-            {
+                 /* {
               name: "Insights",
               id: "mobileInsightsBtn",
               handleClick: () => {
                 navigate(route_names.insights);
               },
-            },
+            }, */
+
             {
               name: "Contact Us",
               id: "mobileContactBtn",
