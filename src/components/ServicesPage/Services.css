@@ -241,6 +241,9 @@
     padding: 12px 15px;
  
   }
-  
+
+  .service-header {
+    height: 30vh;
+  }
 
 }
