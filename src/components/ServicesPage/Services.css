@@ -151,7 +151,24 @@
   margin-bottom: 0;
 }
 
+.service-bullets ul{
+  margin-left: 20px;
 
+  list-style-type: circle  !important; 
+  list-style-position: inside;
+}
+
+.service-bullets li {
+ margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-family: var(--secondary-font);
+  color: #3e3e3e  ;
+
+  list-style: inside;
+
+}
 
 /* Animations */
 @keyframes slideIn {

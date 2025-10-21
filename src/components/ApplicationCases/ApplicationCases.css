@@ -68,15 +68,37 @@
   .use-case-paragraph {
  
     margin-bottom: 1.5rem;
-    text-align: justify;
+    text-align: left;
     max-width: 60%;
     margin-left: 20%;
+    
     
   }
   
   .use-case-paragraph:last-child {
     margin-bottom: 0;
   }
+
+.application-bullets {
+  margin-left: 20%;
+}
+.application-bullets ul{
+  margin-left: 20px;
+  list-style-type: circle  !important; 
+  list-style-position: inside;
+}
+.application-bullets li{
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-family: var(--secondary-font);
+  color: #3e3e3e  ;
+
+  list-style: inside;
+
+}
+
 
 .use-case-content{padding: 24px;}
   
@@ -96,5 +118,16 @@
       margin: auto auto;
       margin-bottom: 1.5rem;
 
+    }
+    .application-bullets {
+      text-align: left;
+
+
+      margin: auto auto;
+    }
+    .application-bullets ul{
+      text-align: left;
+ 
+      margin: auto auto;
     }
   }
