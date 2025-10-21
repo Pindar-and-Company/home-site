@@ -33,33 +33,48 @@ function ServicesPage() {
     'system-design': {
       title: 'System Design',
       content: [
-        'We architect scalable computer vision solutions that grow with your business needs. Our system design approach focuses on building robust, maintainable, and efficient infrastructure.',
-        'Our team specializes in designing distributed systems that can handle large-scale image processing, real-time video analysis, and complex machine learning workflows.',
-        'From edge computing deployments to cloud-native architectures, we ensure your computer vision systems perform optimally across different environments and use cases.'
+        'We start by trying to identify the problem and solution space, and assess the benefits and risks of various  AI/ML implementations.',
+        'Our aim is to help you avoid pitfalls, inform you on future limitations, present trade offs, prerequisites and feasibility of bringing their project to fruition. We act as brainstorming partners, helping the client grow and develop their idea into a product or service prototype.',
+        'The design will serve as a rough blueprint for all future development, and as a high level depiction of how components in the system combine to create desired functionality while adhering to business constraints.',
+        'A few considerations we make during the design phase:',
+        {
+          type: 'bullets',
+          items: [
+            'Expected inputs and outputs in the production environment',
+            'Availability of training datasets,plans to curate an inhouse set if required',
+            'End consumer of model outputs and their expected level of expertise in the problem area.',
+            'Position of model within the overarching product offered by company',
+            'Costs and trade offs of possible component parts in the system'
+          ]
+        },
+
       ]
     },
     'model-training': {
       title: 'Model Training',
       content: [
         'Our model training services encompass the entire machine learning lifecycle, from data preparation to model deployment and monitoring.',
-        'We utilize state-of-the-art deep learning frameworks and techniques to train custom computer vision models tailored to your specific requirements and datasets.',
-        'Our expertise includes transfer learning, data augmentation, hyperparameter optimization, and advanced training strategies to achieve optimal model performance.'
+        'Given a publicly available or client provided dataset, we’ll pick a model architecture, run fine tuning experiments, and evaluation metrics based on client needs and considerations of the business problem.',
+        'Quality is of the utmost importance so we’ll allocate time for reiteration at this stage if we hit any roadblocks in convergence or other performance metrics. At this stage we should consider how best the outputs of the models can be made easily accessible and understandable (context wise) to the downstream consumers of the output'
       ]
     },
     'data-pipelines': {
       title: 'Data Engineering',
       content: [
-        'We design and implement robust data pipelines that orchestrate mission-critical workflows for computer vision applications.',
-        'Our pipeline solutions handle data ingestion, preprocessing, feature extraction, model inference, and result aggregation at enterprise scale.',
-        'From batch processing systems to real-time streaming architectures, we ensure your data flows seamlessly through every stage of your computer vision workflow.'
+        'This service encapsulates the outer infrastructure that supports the models and must exist for them to function at scale with little human intervention.',
+        'Extract transform and load (ETL) pipelines will interact with models as points of ingress and egress. Alerts will be integrated at critical points in the system to catch bad data and or erroneous model outputs, as well as to flag inputs for further investigation.',
+        'This phase includes any tasks dealing with database connections, data cleaning and transformations, API calls, task orchestration and other data processing jobs.'
       ]
     },
     'ml-ops': {
       title: 'ML Ops',
       content: [
-        'Our MLOps services bridge the gap between machine learning development and production deployment, ensuring reliable and scalable ML systems.',
-        'We implement continuous integration and deployment pipelines specifically designed for machine learning models, including automated testing and validation.',
-        'Our MLOps approach includes model versioning, monitoring, A/B testing, and automated retraining to maintain peak performance in production environments.'
+        'The MLOps service is where we turn prototypes and proof of concepts into production ready systems, building for reliability, scalability, and performance.',
+        'Our approach includes model and data versioning, monitoring for degrading performance and  creating alerts if major changes are detected.',
+        'Depending on the requirements of the project we will implement an auto retrain pipeline, allowing the model to self adjust as new data comes in.',
+        'After the model has passed a quality and performance threshold, we can begin to explore our options for remote hosting and inference, given the business constraints.',
+        'Costs associated with hardware access, availability needs, online and offline needs, and more would have been considered in the design-architecture stage and confirmed here.',
+        'During all this, we keep an open line of communication with the you and informing you decisions are being made to avoid any surprises concerning the cost of cloud hosting initially and over time.'
       ]
     }
   };
@@ -97,13 +112,26 @@ function ServicesPage() {
 
         {/* Content Area */}
         <div className="services-pg-content">
-           {/* uses the active tab var to dynamically acsess service content */}
-          {servicesData[activeTab].content.map((paragraph, index) => (
-            <p key={index} className="service-description">
-              {paragraph}
-            </p>
+  {servicesData[activeTab].content.map((item, index) => {
+    // Check if item is a string (paragraph) or object (bullets)
+    if (typeof item === 'string') {
+      return (
+        <p key={index} className="service-description">
+          {item}
+        </p>
+      );
+    } else if (item.type === 'bullets') {
+      return (
+        <ul key={index} className="service-bullets">
+          {item.items.map((bullet, bulletIndex) => (
+            <li key={bulletIndex}>{bullet}</li>
           ))}
-      </div>
+        </ul>
+      );
+    }
+    return null;
+  })}
+</div>
 
       </div>
      
@@ -112,3 +140,9 @@ function ServicesPage() {
 }
 
 export default ServicesPage;
+
+
+
+
+
+

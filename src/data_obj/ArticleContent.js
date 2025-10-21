@@ -18,8 +18,8 @@ The future of data management lies in finding the right balance between data uti
   {
     "word": "[1]",
     "url": "https://www.google.com"
-  }
-]
+  },
+  ]
     },
     {
       id: 2,

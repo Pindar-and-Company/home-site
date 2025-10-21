@@ -12,32 +12,26 @@ export default function AboutPage() {
     'our-mission': {
       title: 'Our Mission',
       content: [
-        'We architect scalable computer vision solutions that grow with your business needs. Our system design approach focuses on building robust, maintainable, and efficient infrastructure.',
-        'Our team specializes in designing distributed systems that can handle large-scale image processing, real-time video analysis, and complex machine learning workflows.',
-        'From edge computing deployments to cloud-native architectures, we ensure your computer vision systems perform optimally across different environments and use cases.'
+        'We aim to use the principles of design and engineering to realize product and service visions of companies across the globe. We believe that innovative companies can bring meaningful improvements to the lives of many people and serve a crucial role in society.',
+        "As engineering consultants, we do not exist to implement technical solutions and move on. Rather we use technical solutions as a means to an end, which is the measurable improvement of business offerings provided by the client.",
+        'Pursuant to this, we aim to identify and build consensus around business KPIs and requirements for success in the earliest stages of engagement and tie performance metrics of implemented systems back to these guiding business goals.'
       ]
     },
-    'leadership': {
-      title: 'Leadership',
-      content: [
-        'Our model training about-us encompass the entire machine learning lifecycle, from data preparation to model deployment and monitoring.',
-        'We utilize state-of-the-art deep learning frameworks and techniques to train custom computer vision models tailored to your specific requirements and datasets.',
-        'Our expertise includes transfer learning, data augmentation, hyperparameter optimization, and advanced training strategies to achieve optimal model performance.'
-      ]
-    },
+    
     'data-privacy': {
       title: 'Data Privacy & Ethics',
       content: [
-        'We design and implement robust data pipelines that orchestrate mission-critical workflows for computer vision applications.',
-        'Our pipeline solutions handle data ingestion, preprocessing, feature extraction, model inference, and result aggregation at enterprise scale.',
-        'From batch processing systems to real-time streaming architectures, we ensure your data flows seamlessly through every stage of your computer vision workflow.'
+        "As MLOPs specialists we know that data is crucial, valuable, and potentially dangerous. For this reason we aim to identify the minimum required data points that we’ll need to carry out the project.",
+        "In being careful about not collecting any data other than what's absolutely necessary, we aim to mitigate leaks and breaches of personally identifiable information.",
+        "We ensure that data is encrypted in rest and in transit and that internal access to sensitive client data is policed by strict permissions and roles."
       ]
     }
    
   };
 
-  const who_we_are = ['We help you go from out of the box components to custom solutions and design scalable systems that remove obstacles to your project goals. ',
-                  'Technical decisions are influenced and measured by business goals and requirements']
+  const who_we_are = ['"The glory of the Olympiads shoots its rays afar in the races, where speed and strength are matched in the bruise of toil. ',
+                  'But the victor, for the rest of his life, enjoys days of contentment"',
+                "    — Pindar 476 BCE"]
   
 
   return (
