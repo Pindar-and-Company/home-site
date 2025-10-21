@@ -29,9 +29,8 @@ function HomeView() {
                     <div className='mobile_background_card'>
                     <h1>MLops Consulting</h1>
                     <div className="intro-subtext">
-                    <p>We help you go from out of the box components
-                    to custom solutions and design scalable systems that
-                     remove obstacles to your project goals</p>
+                    <p>We help you go from off the shelf components
+                    to custom solutions that create value to you and your customers</p>
                      </div>
           
                     <button className="learn-more-button">
