@@ -30,7 +30,7 @@ const ApplicationsData = [
         ]
       },
       "CNN models trained on curated datasets have been shown to excel at early stage detection due to their large capacity for pattern recognition. While machines can still be hampered by internal biases typically stemming from data quality, they are mostly unencumbered by external factors that can impair human detection such as change blindness, and fatigue or distraction based interpretive errors.",
-      "These interpretive errors can have serious consequences for identifying diseases, and as a result are a cause of litigation against clinicians.(Interpretive Error in Radiology). Essentially the main benefits are speedy, accurate detections that are immune to perceptually induced interpretive errors.",
+      "These interpretive errors can have serious consequences for identifying diseases, and as a result are a cause of litigation against clinicians (Interpretive Error in Radiology). Essentially the main benefits are speedy, accurate detections that are immune to perceptually induced interpretive errors.",
       "The growing amount of patient data from EHRs provides the opportunity for superior data analytics and insights. In many ways AI is simply another advancement in data analytics. Generally speaking the more high quality data we can provide the models, the better the outputs will be. Using EHRs and other patient information as our data source introduces another vector of improved patient care, by way of detecting patterns in the data that correlate with known or potentially unknown risk factors and flagging patients early for further investigation.",
       "Computer vision methods such as segmentation can also empower clinicians to better delineate anatomical structures visually, allowing for better planning and targeted interventions (Medical Imaging AI). The confluence of these advancements brings the possibility to realize precision/personalized medicine, which can allow clinicians to take into account a patient's lifestyle, environment, anatomy, and genes to provide insights tailored to the individual, and avoid the negative impacts of a one size fits all approach to treatments.",
       "While these advancements are exciting, they are still developing, broad in scope, and in many ways experimental. It’s important for HIs and med tech companies to properly:",
@@ -66,7 +66,12 @@ const ApplicationsData = [
                     {
                       "word": "(NU Hallucinations)",
                         "url": "https://casmi.northwestern.edu/news/articles/2024/the-hallucination-problem-a-feature-not-a-bug.html"
-                        }]
+                        },
+                        
+                        {
+                          "word": "(Interpretive Error in Radiology)",
+                            "url": "https://ajronline.org/doi/10.2214/AJR.16.16963"
+                            }]
 
                     
                 
