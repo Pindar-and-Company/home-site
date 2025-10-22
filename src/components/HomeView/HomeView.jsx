@@ -30,7 +30,7 @@ function HomeView() {
                     <h1>ML OPS Consulting</h1>
                     <div className="intro-subtext">
                     <p>We help you go from off the shelf components
-                    to custom solutions that create value to you and your customers</p>
+                    to custom solutions that help create value for you and your customers</p>
                      </div>
           
                     <button className="learn-more-button">
